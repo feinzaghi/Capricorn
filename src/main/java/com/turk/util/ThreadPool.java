@@ -32,6 +32,9 @@ public class ThreadPool {
     private static int taskCounter = 0;
 
     public static boolean systemIsBusy = false;
+    
+    //通知停止所有任务
+    public boolean stopAllTask = false;
 
     private List<Task> taskQueue = Collections
             .synchronizedList(new LinkedList<Task>());
@@ -198,6 +201,8 @@ public class ThreadPool {
 	             }
          	}
          }
+         
+         stopAllTask = true;
      }
      
      /**
