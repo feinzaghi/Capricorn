@@ -14,8 +14,8 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import com.turk.config.SystemConfig;
 import com.turk.db.pojo.TempletFile;
-import com.turk.Config.SystemConfig;
 import com.turk.util.Util;
 
 public class TempletFileDAO extends AbstractDAO<TempletFile>

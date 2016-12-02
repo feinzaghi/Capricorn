@@ -9,10 +9,11 @@ import java.util.List;
 
 import com.turk.clusters.master.TaskManage;
 import com.turk.clusters.model.TaskMsg;
+import com.turk.config.ConstDef;
 import com.turk.socket.Client;
 
 import net.sf.json.JSONObject;
-import com.turk.Config.ConstDef;
+
 import com.turk.util.Util;
 
 /**

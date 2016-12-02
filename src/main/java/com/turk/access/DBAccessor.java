@@ -1,8 +1,5 @@
 package com.turk.access;
 
-import com.turk.Config.ConstDef;
-import com.turk.Config.SystemConfig;
-
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -11,6 +8,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.turk.alarm.AlarmMgr;
+import com.turk.config.ConstDef;
+import com.turk.config.SystemConfig;
 import com.turk.distributor.DistributeTemplet;
 import com.turk.parser.LineParser;
 import com.turk.task.RegatherObjInfo;

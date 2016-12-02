@@ -1,10 +1,13 @@
 package com.turk.templet;
 
-import com.turk.Config.SystemConfig;
+import com.turk.config.SystemConfig;
+
 import java.io.File;
 import java.util.Vector;
+
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
+
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;

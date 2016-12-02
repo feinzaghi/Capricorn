@@ -1,8 +1,6 @@
 package com.turk.task;
 
 import com.turk.access.AbstractAccessor;
-import com.turk.Config.ConstDef;
-import com.turk.Config.SystemConfig;
 import com.turk.framework.Factory;
 
 import java.io.Serializable;
@@ -15,12 +13,13 @@ import java.util.HashMap;
 
 import org.apache.log4j.Logger;
 
+import com.turk.config.ConstDef;
+import com.turk.config.SystemConfig;
 import com.turk.datalog.DataLogInfo;
 import com.turk.delayprobe.DelayProbeMgr;
 import com.turk.templet.AbstractTempletBase;
 import com.turk.templet.TempletBase;
 import com.turk.templet.TempletRecord;
-
 import com.turk.util.CommonDB;
 import com.turk.util.LogMgr;
 import com.turk.util.Task;

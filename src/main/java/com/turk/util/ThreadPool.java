@@ -6,7 +6,7 @@ import java.util.List;
 
 import org.apache.log4j.Logger;
 
-import com.turk.Config.SystemConfig;
+import com.turk.config.SystemConfig;
 
 /**
  * Ïß³Ì³Ø

@@ -1,4 +1,4 @@
-package com.turk.Config;
+package com.turk.config;
 
 import java.io.BufferedReader;
 import java.io.File;

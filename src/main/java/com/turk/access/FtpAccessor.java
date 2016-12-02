@@ -1,9 +1,7 @@
 package com.turk.access;
 
 //import access.special.EricssonWcdmaPerformanceAccessor;
-import com.turk.Config.ConstDef;
 import com.turk.framework.DataLifecycleMgr;
-import com.turk.Config.SystemConfig;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -16,6 +14,8 @@ import java.util.Set;
 import com.turk.alarm.AlarmMgr;
 import com.turk.collect.DownStructer;
 import com.turk.collect.FTPTool;
+import com.turk.config.ConstDef;
+import com.turk.config.SystemConfig;
 import com.turk.distributor.DistributeTemplet;
 import com.turk.distributor.TableItem;
 import com.turk.task.IgnoresInfo;

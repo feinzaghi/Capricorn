@@ -1,7 +1,5 @@
 package com.turk.store;
 
-import com.turk.Config.SystemConfig;
-
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileWriter;
@@ -13,8 +11,8 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
+import com.turk.config.SystemConfig;
 import com.turk.exception.StoreException;
-
 import com.turk.task.CollectObjInfo;
 import com.turk.util.ExternalCmd;
 import com.turk.util.SqlldrResult;

@@ -1,7 +1,5 @@
 package com.turk.distributor;
 
-import com.turk.Config.SystemConfig;
-
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
@@ -22,6 +20,7 @@ import java.util.Random;
 
 import org.apache.log4j.Logger;
 
+import com.turk.config.SystemConfig;
 import com.turk.distributor.DistributeTemplet.FieldTemplet;
 import com.turk.distributor.DistributeTemplet.TableTemplet;
 import com.turk.task.CollectObjInfo;

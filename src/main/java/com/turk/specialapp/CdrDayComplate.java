@@ -12,8 +12,7 @@ import java.util.Map;
 import org.apache.log4j.Logger;
 
 import com.turk.collect.FTPTool;
-
-import com.turk.Config.SystemConfig;
+import com.turk.config.SystemConfig;
 import com.turk.util.CommonDB;
 import com.turk.util.LogMgr;
 

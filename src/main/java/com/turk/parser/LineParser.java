@@ -1,7 +1,5 @@
 package com.turk.parser;
 
-import com.turk.Config.ConstDef;
-
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
@@ -12,8 +10,8 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 
+import com.turk.config.ConstDef;
 import com.turk.parser.config.CityConfig;
-
 import com.turk.task.CollectObjInfo;
 import com.turk.task.RegatherObjInfo;
 import com.turk.task.TaskMgr;

@@ -9,10 +9,10 @@ import javax.servlet.jsp.jstl.sql.Result;
 import org.apache.commons.net.ftp.*;
 import org.apache.log4j.Logger;
 
+import com.turk.config.ConstDef;
+import com.turk.config.SystemConfig;
 import com.turk.task.CollectObjInfo;
 import com.turk.templet.*;
-import com.turk.Config.ConstDef;
-import com.turk.Config.SystemConfig;
 import com.turk.util.CommonDB;
 import com.turk.util.LogMgr;
 import com.turk.util.Util;

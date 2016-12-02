@@ -8,8 +8,8 @@ import java.util.Set;
 
 import org.apache.log4j.Logger;
 
-import com.turk.Config.ConstDef;
-import com.turk.Config.SystemConfig;
+import com.turk.config.ConstDef;
+import com.turk.config.SystemConfig;
 
 public class Parsecmd
 {

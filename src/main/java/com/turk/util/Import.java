@@ -17,15 +17,15 @@ import java.util.Map;
 
 import org.apache.log4j.Logger;
 
-import com.turk.Config.SystemConfig;
-import com.turk.DataImport.BCPImport;
-import com.turk.DataImport.ColumnObject;
-import com.turk.DataImport.IOutput;
-import com.turk.DataImport.SqlLoadImport;
 import com.turk.Service.LoaderService;
 import com.turk.Service.MapService;
 import com.turk.Service.TransactionCenter;
 import com.turk.Service.root;
+import com.turk.config.SystemConfig;
+import com.turk.dataimport.BCPImport;
+import com.turk.dataimport.ColumnObject;
+import com.turk.dataimport.IOutput;
+import com.turk.dataimport.SqlLoadImport;
 
 public class Import {
 	protected static Logger log = LogMgr.getInstance().getSystemLogger();

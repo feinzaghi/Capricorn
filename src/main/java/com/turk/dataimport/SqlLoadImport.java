@@ -1,4 +1,4 @@
-package com.turk.DataImport;
+package com.turk.dataimport;
 
 import java.io.BufferedWriter;
 import java.io.File;
@@ -18,9 +18,11 @@ import org.apache.log4j.Logger;
 
 
 
-import com.turk.Config.ConstDef;
-import com.turk.Config.SystemConfig;
-import com.turk.DataImport.ColumnObject;
+
+
+import com.turk.config.ConstDef;
+import com.turk.config.SystemConfig;
+import com.turk.dataimport.ColumnObject;
 import com.turk.util.BalySqlloadThread;
 import com.turk.util.DBLogger;
 import com.turk.util.LogMgr;

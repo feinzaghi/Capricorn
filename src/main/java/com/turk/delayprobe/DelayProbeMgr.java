@@ -1,7 +1,5 @@
 package com.turk.delayprobe;
 
-import com.turk.Config.SystemConfig;
-
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.HashMap;
@@ -12,6 +10,7 @@ import java.util.Set;
 
 import org.apache.log4j.Logger;
 
+import com.turk.config.SystemConfig;
 import com.turk.task.CollectObjInfo;
 import com.turk.task.RegatherObjInfo;
 import com.turk.util.LogMgr;

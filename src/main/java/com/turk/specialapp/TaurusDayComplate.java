@@ -11,10 +11,10 @@ import java.util.Map;
 
 import org.apache.log4j.Logger;
 
-import com.turk.Config.SystemConfig;
 import com.turk.util.CommonDB;
 import com.turk.util.LogMgr;
 import com.turk.collect.FTPTool;
+import com.turk.config.SystemConfig;
 
 public class TaurusDayComplate {
 private static Logger log = LogMgr.getInstance().getSystemLogger();

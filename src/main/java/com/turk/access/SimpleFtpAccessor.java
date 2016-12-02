@@ -1,10 +1,6 @@
 package com.turk.access;
 
-import com.turk.Config.ConstDef;
-
 import com.turk.framework.DataLifecycleMgr;
-
-import com.turk.Config.SystemConfig;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -14,6 +10,8 @@ import java.util.List;
 import com.turk.alarm.AlarmMgr;
 import com.turk.collect.DownStructer;
 import com.turk.collect.FTPTool;
+import com.turk.config.ConstDef;
+import com.turk.config.SystemConfig;
 import com.turk.task.RegatherObjInfo;
 import com.turk.task.TaskMgr;
 import com.turk.util.Parsecmd;

@@ -10,7 +10,7 @@ import org.apache.commons.dbcp.BasicDataSource;
 import org.apache.commons.dbcp.BasicDataSourceFactory;
 import org.apache.log4j.Logger;
 
-import com.turk.Config.SystemConfig;
+import com.turk.config.SystemConfig;
 import com.turk.util.LogMgr;
 
 /**

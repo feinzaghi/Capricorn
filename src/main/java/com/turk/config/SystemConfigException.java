@@ -1,4 +1,4 @@
-package com.turk.Config;
+package com.turk.config;
 
 public class SystemConfigException extends Exception
 {

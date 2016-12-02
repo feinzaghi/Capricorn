@@ -5,12 +5,11 @@ import java.io.IOException;
 import com.turk.alarm.AlarmMgr;
 import com.turk.alarm.ProcessStatus;
 import com.turk.clusters.slave.SlaveActive;
+import com.turk.config.SystemConfig;
 import com.turk.console.ConsoleMgr;
 import com.turk.console.common.console.io.CommandIO;
 import com.turk.datalog.DataLogMgr;
 import com.turk.task.TaskMgr;
-
-import com.turk.Config.SystemConfig;
 import com.turk.app.appinterface;
 import com.turk.db.GPDBPool;
 import com.turk.util.CommonDB;

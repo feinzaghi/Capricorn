@@ -1,7 +1,5 @@
 package com.turk.templet;
 
-import com.turk.Config.SystemConfig;
-
 import java.io.File;
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -14,9 +12,9 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
+import com.turk.config.SystemConfig;
 import com.turk.exception.InvalidParameterValueException;
 import com.turk.parser.xparser.IllegalTagException;
-
 import com.turk.util.Util;
 
 public class DBAutoTempletP extends AbstractTempletBase

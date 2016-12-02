@@ -2,7 +2,7 @@ package com.turk.specialapp;
 
 import org.apache.log4j.Logger;
 
-import com.turk.Config.SystemConfig;
+import com.turk.config.SystemConfig;
 import com.turk.util.LogMgr;
 
 /**

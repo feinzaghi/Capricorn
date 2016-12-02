@@ -4,7 +4,7 @@ import java.io.File;
 
 import org.apache.log4j.Logger;
 
-import com.turk.Config.SystemConfigException;
+import com.turk.config.SystemConfigException;
 import com.turk.util.LogMgr;
 import com.turk.util.PropertiesXML;
 import com.turk.util.Util;

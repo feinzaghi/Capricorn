@@ -14,11 +14,10 @@ import java.util.Map;
 import org.apache.log4j.Logger;
 
 import com.turk.parser.Parser;
-
+import com.turk.config.ConstDef;
 import com.turk.distributor.DistributeTemplet;
 import com.turk.distributor.DistributeTemplet.TableTemplet;
 import com.turk.templet.LineTempletP;
-import com.turk.Config.ConstDef;
 import com.turk.util.LogMgr;
 import com.turk.util.Util;
 

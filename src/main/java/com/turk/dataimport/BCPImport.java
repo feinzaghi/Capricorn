@@ -1,4 +1,4 @@
-package com.turk.DataImport;
+package com.turk.dataimport;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -17,7 +17,7 @@ import java.util.Map;
 
 import org.apache.log4j.Logger;
 
-import com.turk.Config.SystemConfig;
+import com.turk.config.SystemConfig;
 import com.turk.util.CommonDB;
 import com.turk.util.LogMgr;
 import com.turk.util.Util;

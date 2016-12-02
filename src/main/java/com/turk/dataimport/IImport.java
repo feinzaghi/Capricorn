@@ -1,4 +1,4 @@
-package com.turk.DataImport;
+package com.turk.dataimport;
 
 /**
  * 数据输出接口

@@ -14,8 +14,8 @@ import org.w3c.dom.NodeList;
 
 import com.turk.exception.InvalidParameterValueException;
 import com.turk.templet.Table.Column;
+import com.turk.config.SystemConfig;
 import com.turk.distributor.DistributeTemplet;
-import com.turk.Config.SystemConfig;
 import com.turk.util.Util;
 
 public class GenericSectionHeadD extends DistributeTemplet

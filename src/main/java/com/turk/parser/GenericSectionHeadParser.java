@@ -1,7 +1,7 @@
 package com.turk.parser;
 
+import com.turk.config.ConstDef;
 import com.turk.distributor.GenericSectionHeadDistributor;
-import com.turk.Config.ConstDef;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;

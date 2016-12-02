@@ -1,9 +1,8 @@
 package com.turk.access;
 
-import com.turk.Config.ConstDef;
-
+import com.turk.config.ConstDef;
+import com.turk.config.SystemConfig;
 import com.turk.framework.DataLifecycleMgr;
-import com.turk.Config.SystemConfig;
 
 import java.io.File;
 import java.util.ArrayList;

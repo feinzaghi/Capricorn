@@ -1,8 +1,5 @@
 package com.turk.access;
 
-import com.turk.Config.ConstDef;
-import com.turk.Config.SystemConfig;
-
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
@@ -11,6 +8,8 @@ import java.util.HashSet;
 import java.util.Set;
 
 import com.turk.collect.ProtocolTelnet;
+import com.turk.config.ConstDef;
+import com.turk.config.SystemConfig;
 import com.turk.parser.LineParser;
 import com.turk.util.CommonDB;
 import com.turk.util.Task;

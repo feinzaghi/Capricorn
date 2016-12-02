@@ -1,8 +1,5 @@
 package com.turk.access;
 
-import com.turk.Config.ConstDef;
-import com.turk.Config.SystemConfig;
-
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -14,6 +11,8 @@ import java.util.List;
 import java.util.Map;
 
 import com.turk.alarm.AlarmMgr;
+import com.turk.config.ConstDef;
+import com.turk.config.SystemConfig;
 import com.turk.distributor.DistributeTemplet;
 import com.turk.parser.DBAutoParser2;
 import com.turk.task.CollectObjInfo;

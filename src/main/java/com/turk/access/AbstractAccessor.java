@@ -1,7 +1,5 @@
 package com.turk.access;
 
-import com.turk.Config.SystemConfig;
-
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -11,6 +9,7 @@ import java.util.Date;
 
 import org.apache.log4j.Logger;
 
+import com.turk.config.SystemConfig;
 import com.turk.distributor.Distribute;
 import com.turk.distributor.DistributeFile;
 import com.turk.distributor.DistributeSqlLdr;

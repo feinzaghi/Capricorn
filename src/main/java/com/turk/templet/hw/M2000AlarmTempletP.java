@@ -1,7 +1,5 @@
 package com.turk.templet.hw;
 
-import com.turk.Config.SystemConfig;
-
 import java.io.File;
 import java.net.Socket;
 import java.util.HashMap;
@@ -14,6 +12,7 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
+import com.turk.config.SystemConfig;
 import com.turk.templet.AbstractTempletBase;
 
 public class M2000AlarmTempletP extends AbstractTempletBase

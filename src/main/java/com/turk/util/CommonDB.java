@@ -19,7 +19,7 @@ import javax.servlet.jsp.jstl.sql.ResultSupport;
 
 import org.apache.log4j.Logger;
 
-import com.turk.Config.SystemConfig;
+import com.turk.config.SystemConfig;
 
 /**
  * Copyright (C) 2011 UTL

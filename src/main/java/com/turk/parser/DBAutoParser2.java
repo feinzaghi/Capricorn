@@ -1,8 +1,8 @@
 package com.turk.parser;
 
+import com.turk.config.ConstDef;
+import com.turk.config.SystemConfig;
 import com.turk.distributor.DistributeTemplet;
-import com.turk.Config.ConstDef;
-import com.turk.Config.SystemConfig;
 
 import java.io.File;
 import java.io.PrintWriter;
@@ -21,7 +21,6 @@ import java.util.Map;
 import com.turk.exception.StoreException;
 import com.turk.store.SqlldrStore;
 import com.turk.store.SqlldrStoreParam;
-
 import com.turk.task.CollectObjInfo;
 import com.turk.task.DevInfo;
 import com.turk.templet.DBAutoTempletP;

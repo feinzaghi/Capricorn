@@ -45,7 +45,7 @@ import org.dom4j.Element;
 
 import org.nfunk.jep.JEP;
 
-import com.turk.Config.SystemConfig;
+import com.turk.config.SystemConfig;
 
 public class Util
 {

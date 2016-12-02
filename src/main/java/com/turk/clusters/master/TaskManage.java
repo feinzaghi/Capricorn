@@ -22,8 +22,7 @@ import com.turk.clusters.common.TaskObjInfo;
 import com.turk.clusters.model.Register;
 import com.turk.clusters.model.SlaveInfo;
 import com.turk.clusters.model.StatTaskInfo;
-
-import com.turk.Config.SystemConfig;
+import com.turk.config.SystemConfig;
 import com.turk.util.CommonDB;
 import com.turk.util.Util;
 import com.turk.util.LogMgr;

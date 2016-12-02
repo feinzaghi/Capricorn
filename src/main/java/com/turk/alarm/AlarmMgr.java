@@ -1,7 +1,5 @@
 package com.turk.alarm;
 
-import com.turk.Config.SystemConfig;
-
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -16,6 +14,7 @@ import java.util.concurrent.Executors;
 
 import org.apache.log4j.Logger;
 
+import com.turk.config.SystemConfig;
 import com.turk.util.CommonDB;
 import com.turk.util.LogMgr;
 import com.turk.util.MsgQueue;

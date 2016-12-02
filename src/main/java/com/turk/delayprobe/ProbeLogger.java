@@ -1,10 +1,11 @@
 package com.turk.delayprobe;
 
-import com.turk.Config.SystemConfig;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Date;
+
+import com.turk.config.SystemConfig;
 import com.turk.util.Util;
 
 /**

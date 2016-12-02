@@ -1,6 +1,6 @@
-package com.turk.DataImport;
+package com.turk.dataimport;
 
-import com.turk.DataImport.ColumnObject;
+import com.turk.dataimport.ColumnObject;
 
 /**
  * Copyright (C) 2011 UTL

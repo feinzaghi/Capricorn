@@ -1,9 +1,11 @@
 package com.turk.alarm;
 
-import com.turk.Config.SystemConfig;
 import javax.mail.MessagingException;
 import javax.mail.internet.AddressException;
+
 import org.apache.log4j.Logger;
+
+import com.turk.config.SystemConfig;
 import com.turk.util.Email;
 import com.turk.util.LogMgr;
 

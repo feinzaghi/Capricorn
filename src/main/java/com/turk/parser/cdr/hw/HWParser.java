@@ -11,10 +11,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 import com.turk.parser.Parser;
-
 import com.turk.collect.FTPTool;
+import com.turk.config.SystemConfig;
 import com.turk.templet.LineTempletP;
-import com.turk.Config.SystemConfig;
 
 /**
  * 华为话单解码

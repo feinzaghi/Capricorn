@@ -2,14 +2,13 @@ package com.turk.console.commands;
 
 import com.turk.alarm.AlarmMgr;
 import com.turk.alarm.ProcessStatus;
+import com.turk.config.SystemConfig;
 import com.turk.console.ConsoleMgr;
 import com.turk.console.common.console.io.CommandIO;
 import com.turk.datalog.DataLogMgr;
 import com.turk.task.TaskMgr;
-
 import com.turk.framework.DataLifecycleMgr;
 import com.turk.framework.ScanThread;
-import com.turk.Config.SystemConfig;
 import com.turk.app.appinterface;
 import com.turk.db.GPDBPool;
 import com.turk.util.CommonDB;

@@ -1,6 +1,6 @@
 package com.turk.templet;
 
-import com.turk.Config.SystemConfig;
+import com.turk.config.SystemConfig;
 
 import java.io.File;
 import java.util.HashMap;

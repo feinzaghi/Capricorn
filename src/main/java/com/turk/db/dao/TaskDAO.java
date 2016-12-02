@@ -1,7 +1,5 @@
 package com.turk.db.dao;
 
-import com.turk.Config.ConstDef;
-
 import java.io.Writer;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -18,10 +16,10 @@ import oracle.sql.CLOB;
 
 import org.apache.log4j.Logger;
 
+import com.turk.config.ConstDef;
 import com.turk.db.pojo.CollectPeriod;
 import com.turk.db.pojo.CollectType;
 import com.turk.db.pojo.Task;
-
 import com.turk.util.CommonDB;
 import com.turk.util.DbPool;
 import com.turk.util.LogMgr;

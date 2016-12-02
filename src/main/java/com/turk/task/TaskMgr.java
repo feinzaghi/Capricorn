@@ -1,8 +1,5 @@
 package com.turk.task;
 
-import com.turk.Config.ConstDef;
-import com.turk.Config.SystemConfig;
-
 import java.io.File;
 import java.io.Writer;
 import java.sql.Connection;
@@ -27,9 +24,10 @@ import oracle.sql.CLOB;
 import org.apache.log4j.Logger;
 
 import com.turk.alarm.AlarmMgr;
+import com.turk.config.ConstDef;
+import com.turk.config.SystemConfig;
 import com.turk.delayprobe.DelayProbeMgr;
 import com.turk.task.Config.taskInfo;
-
 import com.turk.util.CommonDB;
 import com.turk.util.DbPool;
 import com.turk.util.LogMgr;

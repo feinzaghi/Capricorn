@@ -1,7 +1,7 @@
 package com.turk.task;
 
 import com.turk.access.AbstractAccessor;
-import com.turk.Config.ConstDef;
+import com.turk.config.ConstDef;
 import com.turk.framework.Factory;
 
 import java.io.FileWriter;

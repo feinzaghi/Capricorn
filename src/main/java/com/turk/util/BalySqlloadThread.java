@@ -13,7 +13,8 @@ import org.apache.log4j.Logger;
 
 
 
-import com.turk.Config.SystemConfig;
+
+import com.turk.config.SystemConfig;
 import com.turk.util.loganalyzer.SqlLdrLogAnalyzer;
 
 public class BalySqlloadThread extends Task

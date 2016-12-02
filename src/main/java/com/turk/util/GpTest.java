@@ -3,7 +3,7 @@ package com.turk.util;
 import java.io.File;
 import java.io.IOException;
 
-import com.turk.Config.SystemConfig;
+import com.turk.config.SystemConfig;
 
 public class GpTest {
 

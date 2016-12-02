@@ -1,4 +1,4 @@
-package com.turk.DataImport;
+package com.turk.dataimport;
 
 /**
  * Copyright (C) 2011 UTL

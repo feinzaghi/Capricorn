@@ -7,8 +7,8 @@ import java.util.Date;
 
 import org.apache.log4j.Logger;
 
-import com.turk.Config.SystemConfig;
 
+import com.turk.config.SystemConfig;
 //import task.CollectObjInfo;
 //import task.DevInfo;
 import com.turk.util.loganalyzer.SqlLdrLogAnalyzer;

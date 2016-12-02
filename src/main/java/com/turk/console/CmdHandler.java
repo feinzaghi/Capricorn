@@ -3,8 +3,6 @@ package com.turk.console;
 import com.turk.framework.DataLifecycleMgr;
 import com.turk.framework.ScanThread;
 
-import com.turk.Config.SystemConfig;
-
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
@@ -18,6 +16,7 @@ import java.util.List;
 import java.util.Properties;
 
 import com.turk.alarm.AlarmMgr;
+import com.turk.config.SystemConfig;
 import com.turk.datalog.DataLogMgr;
 import com.turk.task.CollectObjInfo;
 import com.turk.task.RegatherObjInfo;

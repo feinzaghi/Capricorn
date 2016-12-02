@@ -15,7 +15,7 @@ import javax.servlet.jsp.jstl.sql.ResultSupport;
 
 import org.apache.log4j.Logger;
 
-import com.turk.Config.SystemConfig;
+import com.turk.config.SystemConfig;
 import com.turk.util.CommonDB;
 import com.turk.util.DbPool;
 import com.turk.util.LogMgr;

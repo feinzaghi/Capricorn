@@ -1,6 +1,6 @@
 package com.turk.distributor;
 
-import com.turk.Config.SystemConfig;
+import com.turk.config.SystemConfig;
 import com.turk.templet.AbstractTempletBase;
 
 import java.io.File;

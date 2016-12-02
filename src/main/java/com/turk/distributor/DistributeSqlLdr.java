@@ -1,7 +1,5 @@
 package com.turk.distributor;
 
-import com.turk.Config.SystemConfig;
-
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
@@ -24,6 +22,7 @@ import java.util.Map;
 import org.apache.log4j.Logger;
 
 import com.turk.alarm.AlarmMgr;
+import com.turk.config.SystemConfig;
 import com.turk.distributor.DistributeTemplet.FieldTemplet;
 import com.turk.task.CollectObjInfo;
 import com.turk.util.BalySqlloadThread;

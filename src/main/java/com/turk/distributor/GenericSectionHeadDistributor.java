@@ -1,7 +1,5 @@
 package com.turk.distributor;
 
-import com.turk.Config.SystemConfig;
-
 import java.io.File;
 import java.io.PrintWriter;
 import java.util.ArrayList;
@@ -10,6 +8,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.Random;
 
+import com.turk.config.SystemConfig;
 import com.turk.exception.ParseException;
 import com.turk.exception.StoreException;
 import com.turk.store.SqlldrStore;
@@ -18,7 +17,6 @@ import com.turk.task.CollectObjInfo;
 import com.turk.templet.GenericSectionHeadD;
 import com.turk.templet.GenericSectionHeadP;
 import com.turk.templet.Table;
-
 import com.turk.util.Util;
 
 public class GenericSectionHeadDistributor extends Distribute

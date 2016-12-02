@@ -5,7 +5,7 @@ import java.io.FileReader;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import com.turk.Config.ConstDef;
+import com.turk.config.ConstDef;
 import com.turk.task.CollectObjInfo;
 import com.turk.templet.Sect21TempletP;
 

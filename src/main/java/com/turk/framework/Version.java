@@ -1,8 +1,8 @@
 package com.turk.framework;
 
 
+import com.turk.config.SystemConfig;
 import com.turk.util.Util;
-import com.turk.Config.SystemConfig;
 
 /**
  * ∞Ê±æπ‹¿Ì

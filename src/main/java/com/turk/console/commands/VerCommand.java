@@ -1,8 +1,7 @@
 package com.turk.console.commands;
 
+import com.turk.config.SystemConfig;
 import com.turk.console.common.console.io.CommandIO;
-
-import com.turk.Config.SystemConfig;
 
 public class VerCommand extends BasicCommand
 {

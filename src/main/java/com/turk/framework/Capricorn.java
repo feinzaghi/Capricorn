@@ -11,8 +11,9 @@ import org.apache.log4j.Logger;
 
 //import specialapp.taurus.utele.FlexAuthServer;
 //import specialapp.taurus.utele.MonitorServer;
-import com.turk.Config.SystemConfig;
+
 import com.turk.app.appinterface;
+import com.turk.config.SystemConfig;
 import com.turk.console.ConsoleMgr;
 import com.turk.util.LogMgr;
 import com.turk.util.Util;

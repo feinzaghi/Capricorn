@@ -1,13 +1,12 @@
 package com.turk.access;
 
-import com.turk.Config.ConstDef;
-
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.List;
 
 import com.turk.alarm.AlarmMgr;
+import com.turk.config.ConstDef;
 import com.turk.task.TaskMgr;
 import com.turk.util.CommonDB;
 import com.turk.util.DBLogger;

@@ -5,9 +5,8 @@ import net.sf.json.JSONObject;
 import org.apache.log4j.Logger;
 
 import com.turk.clusters.model.Register;
+import com.turk.config.SystemConfig;
 import com.turk.socket.Client;
-
-import com.turk.Config.SystemConfig;
 import com.turk.util.LogMgr;
 import com.turk.util.ThreadPool;
 

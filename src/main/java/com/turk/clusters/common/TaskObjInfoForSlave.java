@@ -9,14 +9,13 @@ import java.util.HashMap;
 import com.turk.clusters.master.TaskManage;
 import com.turk.clusters.model.TaskMsg;
 import com.turk.clusters.slave.SlaveConfig;
+import com.turk.config.ConstDef;
 import com.turk.socket.Client;
 
 import net.sf.json.JSONObject;
 
 import com.turk.task.CollectObjInfo;
 import com.turk.task.TaskMgr;
-
-import com.turk.Config.ConstDef;
 import com.turk.util.Util;
 
 public class TaskObjInfoForSlave extends CollectObjInfo
