@@ -76,19 +76,19 @@ public class SlaveMain {
 
 		DataLifecycleMgr.getInstance().start();
 		
-		if(SystemConfig.getInstance().IsStartTaurusSocket())
-		{//Socket for taurus
-			try {
-				
-				FlexAuthServer.getInstance().startServer();
-				MonitorServer.getInstance().start();
-				
-				MapImsiMsisdn.getInstance();
-			} catch (Exception e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-		}
+//		if(SystemConfig.getInstance().IsStartTaurusSocket())
+//		{//Socket for taurus
+//			try {
+//				
+//				FlexAuthServer.getInstance().startServer();
+//				MonitorServer.getInstance().start();
+//				
+//				MapImsiMsisdn.getInstance();
+//			} catch (Exception e) {
+//				// TODO Auto-generated catch block
+//				e.printStackTrace();
+//			}
+//		}
 		
 		SlaveMain.getInstance();
 	}

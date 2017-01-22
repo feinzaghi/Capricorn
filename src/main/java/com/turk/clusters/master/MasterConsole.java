@@ -13,10 +13,10 @@ import static org.junit.Assert.assertEquals;
 import org.apache.commons.beanutils.PropertyUtils;
 import org.apache.log4j.Logger;
 
+import com.turk.rpc.NettyServer;
 import com.turk.clusters.model.Register;
 import com.turk.clusters.model.SlaveInfo;
 import com.turk.clusters.model.TaskMsg;
-
 import com.turk.util.LogMgr;
 
 /**
@@ -50,9 +50,9 @@ public class MasterConsole{
 		try 
 		{
 			//建立Socket监听
-			serverSocket=new ServerSocket(port);
+			//serverSocket=new ServerSocket(port);
 			log.debug("Start Master Socket Port[" + port + "] listener Success!");
-		} catch (IOException e) {
+		} catch (Exception e) {
 			log.warn("Start Master Socket Port[" + port + "] listener Failure!",e);
 		}
 	}
@@ -60,18 +60,39 @@ public class MasterConsole{
 	/**
 	 * 启动服务
 	 */
+// 	public void start()
+// 		throws IOException
+//    {
+// 		this.mainThread = new Thread(new Runnable()
+// 		{
+// 			public void run()
+// 			{
+// 				service("master start");
+// 			}
+// 		});
+// 		this.mainThread.start();
+//    }
+ 	
  	public void start()
- 		throws IOException
-    {
- 		this.mainThread = new Thread(new Runnable()
- 		{
- 			public void run()
- 			{
- 				service("master start");
- 			}
- 		});
- 		this.mainThread.start();
-    }
+ 	 		throws IOException
+ 	    {
+ 	 		this.mainThread = new Thread(new Runnable()
+ 	 		{
+ 	 			public void run()
+ 	 			{
+// 	 				service("master start");
+ 	 				try {//Netty Server 2016/11/24 by turk
+ 						new NettyServer().bind(port);
+ 						
+ 					} catch (Exception e) {
+ 						// TODO Auto-generated catch block
+ 						log.error("Start Netty Sever Error",e);
+ 					}
+ 	 			}
+ 	 		});
+ 	 		this.mainThread.start();
+ 	 		log.info("Start Master Socket Port[" + port + "] listener Success!");
+ 	    }
  	
  	/**
  	 * 监听服务

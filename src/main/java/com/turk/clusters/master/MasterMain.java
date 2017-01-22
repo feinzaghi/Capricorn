@@ -28,7 +28,6 @@ public class MasterMain {
 	{
 		
 		log.info("Master 启动.");
-		
 		Version ver = Version.getInstance();
 		String strVer = ver.getExpectedVersion();
 		if (!ver.isRightVersion())
@@ -39,6 +38,7 @@ public class MasterMain {
 		log.info("版本号:" + strVer);
 		try
 		{
+			//管理控制台
 			int port = 9020;
 			ConsoleMgr.getInstance(port).start();
 		}
@@ -47,6 +47,7 @@ public class MasterMain {
 			log.error("采集系统启动失败,原因: 控制台模块启动异常. ", e);
 		}
 		
+		//自检模块
 		SelfTest st = SelfTest.getInstance();
 		if(!st.IsOK())
 		{
@@ -54,8 +55,10 @@ public class MasterMain {
 			return;
 		}
 
+		//打印环境变量
 		Util.printEnvironmentInfo();
 
+		//加载bean
 		PBeanMgr.getInstance();
 
 		AlarmMgr.getInstance();
@@ -64,11 +67,12 @@ public class MasterMain {
 
 		DataLifecycleMgr.getInstance().start();
 
+		//主节点
 		MasterMain.getInstance();
+		
+		//采集任务模块
 		ScanThread scanThread = ScanThread.getInstance();
-		scanThread.startScan();		
-		
-		
+		scanThread.startScan();	
 	}
 	
 	
