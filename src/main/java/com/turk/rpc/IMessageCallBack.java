@@ -1,7 +1,7 @@
 package com.turk.rpc;
 
 /**
- * 瀹㈡埛绔粠鏈嶅姟绔幏鍙栨秷鎭箣鍚庣殑鍥炶皟
+ * 客户端从服务端获取消息之后的回调
  * @author Administrator
  *
  */

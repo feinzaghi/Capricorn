@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pbeans>
+	<!--
+		<name></name> <des></des> <bean></bean> <params> <param> <name></name>
+		<value></value> </param> </params>
+	-->
+	<!--
+		value-defined rule: ___________________ total: 4 digits
+		___________________ 0 - 1999: system define ___________________
+		huawei: 2xxx; zte: 3xxx; A-lucent: 4xxx; eric: 5xxx; bell: 6xxx;
+		cisco: 7xxx; Siemens: 8xxx; others: 9xxx; ___________________
+	-->
+	<accessors>
+		<accessor id="1">
+			<name>g-telnet-accessor</name>
+			<des>generic telnet-type gather</des>
+			<bean>access.TelnetAccessor</bean>
+		</accessor>
+		<accessor id="2">
+			<name>g-tcp-accessor</name>
+			<des>generic tcp-type gather</des>
+			<bean />
+		</accessor>
+		<accessor id="3">
+			<name>g-ftp-accessor</name>
+			<des>generic ftp-type gather</des>
+			<bean>access.FtpAccessor</bean>
+		</accessor>
+		<accessor id="4">
+			<name>g-file-accessor</name>
+			<des>generic file-type gather</des>
+			<bean>access.LocalFileAccessor</bean>
+		</accessor>
+		<accessor id="5">
+			<name>g-db-accessor</name>
+			<des>generic db-type gather</des>
+			<bean>access.DBAccessor</bean>
+		</accessor>
+		<accessor id="6">
+			<name>g-db-auto-accessor</name>
+			<des>auto db-type gather</des>
+			<bean>access.DBAutoAccessor</bean>
+		</accessor>
+		<accessor id="60">
+			<name>g-db-auto-accessor-2</name>
+			<des>auto db-type gather v2</des>
+			<bean>access.DBAutoAccessor2</bean>
+		</accessor>
+		<accessor id="8">
+			<name>g-db-accessor</name>
+			<des>generic db-type gather</des>
+			<bean>access.SocketAccessor</bean>
+		</accessor>
+		<accessor id="9">
+			<name>g-db-accessor</name>
+			<des>generic ftp-type download</des>
+			<bean>access.SimpleFtpAccessor</bean>
+		</accessor>
+		<accessor id="10">
+			<name>socket-server</name>
+			<des>socket server</des>
+			<bean>access.SocketServerAccessor</bean>
+		</accessor>
+
+
+	</accessors>
+	<parsers>
+		<parser id="-1">
+			<name>non-parser</name>
+			<des>non parser</des>
+			<bean>parser.NonParser</bean>
+		</parser>
+		<parser id="0">
+			<name>empty-parser</name>
+			<des>empty-type parser</des>
+			<bean>parser.EmptyParser</bean>
+		</parser>
+		<parser id="1">
+			<name>g-line-parser</name>
+			<des>generic line-type parser</des>
+			<bean>parser.LineParser</bean>
+		</parser>
+		<parser id="2">
+			<name>sect-parser</name>
+			<des>sect-type parser</des>
+			<bean>parser.SectParser</bean>
+		</parser>
+		<parser id="3">
+			<name>third-parser</name>
+			<des>third-type parser</des>
+			<bean />
+		</parser>
+		<parser id="4">
+			<name>xml-parser</name>
+			<des>xml-type parser</des>
+			<bean>parser.XMLParser</bean>
+		</parser>
+		<parser id="5">
+			<name>xls-parser</name>
+			<des>xls-type parser</des>
+			<bean>parser.XlsParser</bean>
+		</parser>
+		<parser id="6">
+			<name>db-auto-parser</name>
+			<des>db-type parser</des>
+			<bean>parser.DBAutoParser</bean>
+		</parser>
+		<parser id="7">
+			<name>cdr-hw-parser</name>
+			<des>cdr hw parser</des>
+			<bean>parser.cdr.hw.HWParser</bean>
+		</parser>
+		<parser id="8">
+			<name>taurus-cdr-avl</name>
+			<des>taurus CDR AVL</des>
+			<bean>parser.taurus.AvlCdrParser</bean>
+		</parser>
+		<parser id="9">
+			<name>para-hw-csv</name>
+			<des>PARA HW CSV</des>
+			<bean>parser.para.HWParaParser</bean>
+		</parser>
+		<parser id="10">
+			<name>alarm-zte-log</name>
+			<des>ALARM ZTE LOG</des>
+			<bean>parser.alarm.ZTEAlarmParser</bean>
+		</parser>
+		<parser id="11">
+			<name>alucent-pm-parser</name>
+			<des>alucent pm parser</des>
+			<bean>parser.lucent.CV1ASCII</bean>
+		</parser>
+		<parser id="12">
+			<name>hwcm-parser</name>
+			<des>huaweipm-type parser</des>
+			<bean>parser.hw.pm.CV1Xml</bean>
+		</parser>
+		<parser id="13">
+			<name>hwcm-parser</name>
+			<des>huconfig-type parser</des>
+			<bean>parser.zte.pm.CV2ASCII</bean>
+		</parser>
+		<parser id="14">
+			<name>hwcm-parser</name>
+			<des>hucm-type parser</des>
+			<bean>parser.hw.mml.WV1ASCII</bean>
+		</parser>
+		<parser id="15">
+			<name>empty-parser</name>
+			<des>empty-type parser</des>
+			<bean>collect.SocketCollect</bean>
+		</parser>
+		<parser id="16">
+			<name>hwcm-parser</name>
+			<des>huaweicm-type parser</des>
+			<bean>parser.hw.cm.CV1CSV</bean>
+		</parser>
+		<parser id="17">
+			<name>hwcm-parser</name>
+			<des>huaweiconfig-type parser</des>
+			<bean>parser.hw.cm.cfg.CV1CSV</bean>
+		</parser>
+		<parser id="18">
+			<name>eric-w-pm-parser</name>
+			<des>eric w pm parser</des>
+			<bean>parser.eric.pm.WV2XML</bean>
+		</parser>
+		<parser id="19">
+			<name>eric-w-cm-parser</name>
+			<des>eric w cm parser</des>
+			<bean>parser.eric.cm.WV1XML</bean>
+		</parser>
+		<parser id="20">
+			<name>hwcm-parser</name>
+			<des>huaweiam-type parser</des>
+			<bean>parser.hw.am.CV1CSV</bean>
+		</parser>
+		<parser id="21">
+			<name>sect-21-parser</name>
+			<des>sect-21-type parser</des>
+			<bean>parser.Sect21Parser</bean>
+		</parser>
+		<parser id="22">
+			<name>socket-server-parser</name>
+			<des>socket parser</des>
+			<bean>collect.SocketServer</bean>
+		</parser>
+		<parser id="23">
+			<name>eric-g-cm-parser</name>
+			<des>eric g cm parser</des>
+			<bean>parser.eric.cm.GV1ASCII</bean>
+		</parser>
+		<parser id="24">
+			<name>hwcm-parser</name>
+			<des>huconfig-type parser</des>
+			<bean>parser.others.gpslog.CV1Bin</bean>
+		</parser>
+		<parser id="25">
+			<name>taurus-dt-txt</name>
+			<des>taurus-cdr-txt</des>
+			<bean>parser.taurus.DTParser</bean>
+		</parser>
+		<parser id="26">
+			<name>taurus-syn-csv</name>
+			<des>taurus-syn-csv</des>
+			<bean>parser.taurus.SYNParser</bean>
+		</parser>
+		<parser id="27">
+			<name>taurus-cdr-V2-avl</name>
+			<des>taurus CDR V2 AVL</des>
+			<bean>parser.taurus.AvlCdrParserV2</bean>
+		</parser>
+		<parser id="28">
+			<name>taurus-syn-V2-csv</name>
+			<des>taurus-syn-V2-csv</des>
+			<bean>parser.taurus.SYNParserV2</bean>
+		</parser>
+		
+		<parser id="35">
+			<name>dbf-parser</name>
+			<des>hw pm dbf parser</des>
+			<bean>parser.hw.pm.GV1DBF</bean>
+		</parser>
+		<parser id="60">
+			<name>db-auto-parser-2</name>
+			<des>db-type parser v2</des>
+			<bean>parser.DBAutoParser2</bean>
+		</parser>
+		<parser id="999">
+			<name>hwcm-parser</name>
+			<des>huconfig-type parser</des>
+			<bean>parser.xparser.tag.GenericParser</bean>
+		</parser>
+		<parser id="2001">
+			<name>hwcm-parser</name>
+			<des>huaweiam-type parser</des>
+			<bean>parser.hw.am.CV1LogSH</bean>
+		</parser>
+		<parser id="2002">
+			<name>hw-wcdma-cm-xml</name>
+			<des>hw-wcdma-cm-xml</des>
+			<bean>parser.hw.cm.w.WV2XML</bean>
+		</parser>
+		<parser id="2003">
+			<name>hw-wcdma-pm-xml</name>
+			<des>hw-wcdma-pm-xml</des>
+			<bean>parser.hw.pm.w.xml.WV1XML</bean>
+		</parser>
+		<parser id="4001">
+			<name>al-w-parser</name>
+			<des></des>
+			<bean>parser.lucent.w.WV1XML</bean>
+		</parser>
+		<parser id="4002">
+			<name>al-c-do-cm-parser</name>
+			<des></des>
+			<bean>parser.lucent.cm.cdma.CV1XML</bean>
+		</parser>
+		<parser id="4111">
+			<name>lucent-cm-parser</name>
+			<des></des>
+			<bean>parser.lucent.cm.WV2XML</bean>
+		</parser>
+		<parser id="6001">
+			<name>bell-parser</name>
+			<des>bell-type parser</des>
+			<bean>parser.GenericSectionHeadParser</bean>
+		</parser>
+		<parser id="8001">
+			<name>sim-pm-rc90-parser</name>
+			<des>simpm-type parser 10-05-20</des>
+			<bean>parser.siemens.pm.GRC90ASCII</bean>
+		</parser>
+		<parser id="8002">
+			<name>sim-cm-rc90-parser</name>
+			<des>simcm-type parser 2010-07-13</des>
+			<bean>parser.siemens.cm.GV1ASCII</bean>
+		</parser>
+		<parser id="3010">
+			<name>c-wlan-hp-cm-parser</name>
+			<des>wlan</des>
+			<bean>parser.c.wlan.bean.CV2XML_HP_CM</bean>
+		</parser>
+		<parser id="3011">
+			<name>c-wlan-ap-cm-parser</name>
+			<des>wlan</des>
+			<bean>parser.c.wlan.bean.CV2XML_AP_CM</bean>
+		</parser>
+		<parser id="3012">
+			<name>c-wlan-ap-fm-parser</name>
+			<des>wlan</des>
+			<bean>parser.c.wlan.bean.CV2XML_AP_FM</bean>
+		</parser>
+		<parser id="3013">
+			<name>c-wlan-ap-pm-parser</name>
+			<des>wlan</des>
+			<bean>parser.c.wlan.bean.CV2XML_AP_PM</bean>
+		</parser>
+		<parser id="3014">
+			<name>c-jswlan-ap-cm-parser</name>
+			<des>wlan</des>
+			<bean>parser.c.wlan.bean.CV2XML_AP_CM_JS</bean>
+		</parser>
+		<parser id="3015">
+			<name>c-jswlan-ap-pm-parser</name>
+			<des>wlan</des>
+			<bean>parser.c.wlan.bean.CV2XML_AP_PM_JS</bean>
+		</parser>
+		<parser id="3016">
+			<name>c-jswlan-hp-cm-parser</name>
+			<des>wlan</des>
+			<bean>parser.c.wlan.bean.CV2XML_HP_CM_JS</bean>
+		</parser>
+		<parser id="9001">
+			<name>chongqing work flow xls</name>
+			<des>chongqing work flow xls</des>
+			<bean>parser.cqworkflow.GV1XLS</bean>
+		</parser>
+		<parser id="9002">
+			<name>chongqing work flow xml</name>
+			<des>chongqing work flow xml</des>
+			<bean>parser.cqworkflow.GV1XML</bean>
+		</parser>
+		<parser id="9003">
+			<name>DT dingli SagemOT160</name>
+			<des>DT dingli SagemOT160</des>
+			<bean>parser.dt.dingli.SagemOT160</bean>
+		</parser>
+		<parser id="9004">
+			<name>DT CTI</name>
+			<des>DT CTI</des>
+			<bean>parser.dt.dingli.CTIStandard</bean>
+		</parser>
+	</parsers>
+
+	<distributors>
+		<distributor id="6">
+			<name>old-distributor-v3.0</name>
+			<des>old-distributor-v3.0</des>
+			<bean>distributor.Distribute</bean>
+		</distributor>
+		<distributor id="2">
+			<name>generic-section-head-distributor-v3.1</name>
+			<des>generic-section-head-distributor-v3.1 2010-06-24</des>
+			<bean>distributor.GenericSectionHeadDistributor</bean>
+		</distributor>
+	</distributors>
+
+	<templates>
+		<template id="-1">
+			<name>shareplat-template-p</name>
+			<des>shareplat parse template</des>
+			<bean>templet.LineTempletP</bean>
+		</template>
+		<template id="0">
+			<name>empty-template-p</name>
+			<des>empty-type parse template</des>
+			<bean>templet.EmptyTempletP</bean>
+		</template>
+		<template id="1">
+			<name>g-line-template-p</name>
+			<des>generic line-type parse template</des>
+			<bean>templet.LineTempletP</bean>
+		</template>
+		<template id="2">
+			<name>sect-template-p</name>
+			<des>sect-type parse template(FIELDITEM=table)</des>
+			<bean>templet.SectTempletP</bean>
+		</template>
+		<template id="3">
+			<name>third-template-p</name>
+			<des>third-type parse template</des>
+			<bean>templet.ThirdTempletP</bean>
+		</template>
+		<template id="4">
+			<name>xml-template-p</name>
+			<des>xml-type parse template</des>
+			<bean>templet.XMLTempletP</bean>
+		</template>
+		<template id="5">
+			<name>xls-template-p</name>
+			<des>xls-type parse template</des>
+			<bean>templet.XlsTempletP</bean>
+		</template>
+		<template id="6">
+			<name>empty-template-p</name>
+			<des>empty-type parse template</des>
+			<bean>distributor.DistributeTemplet</bean>
+		</template>
+		<template id="7">
+			<name>db-auto-template-p</name>
+			<des>db-auto-type parse templet</des>
+			<bean>templet.DBAutoTempletP</bean>
+		</template>
+		<template id="60">
+			<name>db-auto-template-p-2</name>
+			<des>db-auto-type parse templet v2</des>
+			<bean>templet.DBAutoTempletP2</bean>
+		</template>
+		<template id="13">
+			<name>empty-template-p</name>
+			<des>empty-type parse template</des>
+			<bean>templet.zte.PmTempletP</bean>
+		</template>
+
+		<template id="15">
+			<name>empty-template-p</name>
+			<des>empty-type parse template</des>
+			<bean>templet.hw.M2000AlarmTempletP</bean>
+		</template>
+		<template id="21">
+			<name>sect-21-template-p</name>
+			<des>sect-type parse template(SECTITEM=table)</des>
+			<bean>templet.Sect21TempletP</bean>
+		</template>
+		<template id="999">
+			<name>empty-template-p</name>
+			<des>empty-type parse template</des>
+			<bean>templet.xparser.GenericTemplet</bean>
+		</template>
+		<template id="6001">
+			<name>bell-template-p</name>
+			<des>bell-type parse template</des>
+			<bean>templet.GenericSectionHeadP</bean>
+		</template>
+		<template id="6002">
+			<name>bell-template-d</name>
+			<des>bell-type distribute template</des>
+			<bean>templet.GenericSectionHeadD</bean>
+		</template>
+		<template id="8001">
+			<name>simw-pm-rc90-template-p</name>
+			<des>simpm-type parse template</des>
+			<bean>templet.siemens.GRC90PMTempletP</bean>
+		</template>
+	</templates>
+</pbeans>

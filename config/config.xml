@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<config>
+	<system>
+		<currentPath>D:\workspace\turk-capricorn\</currentPath>
+		<templetFilePath>D:\workspace\turk-capricorn\templet</templetFilePath>
+		<taskFilePath>D:\workspace\turk-capricorn\config</taskFilePath>
+		<fieldMatch>0.99</fieldMatch>
+		<port>9876</port>
+		<zipTool>C:\\Program Files\\WinRAR</zipTool>
+		<maxThreadCount>200</maxThreadCount>
+		<maxCltCount>30</maxCltCount> <!-- 最大正常任务线程数 -->
+		<maxRecltCount>100</maxRecltCount><!-- 最大补采任务线程数 -->
+		<maxCountPerRegather>200</maxCountPerRegather>
+		<version>
+			<edition>2.1.0.0</edition>
+			<releaseTime>2012-08-31</releaseTime>
+		</version>
+		<UteleServiceUrl>http://192.168.0.200:9090/UteleService/MapService.asmx?wsdl</UteleServiceUrl>
+		<UteleSMSUrl>http://192.168.0.120:8081/ComBack/utl/GSM</UteleSMSUrl>
+		
+	</system>
+	
+	<db>
+		<name>UTL_DB_POOL</name>
+		<type>javax.sql.DataSource</type>
+		<driverClassName>oracle.jdbc.driver.OracleDriver</driverClassName>
+		<url>jdbc:oracle:oci:@LEODB</url>
+		<!--<driverClassName>com.mysql.jdbc.Driver</driverClassName>
+		<url>jdbc:mysql://192.168.0.130:3306/leodb</url>-->
+		<service>LEODB</service>
+		<user>utl</user>
+		<password>utl2011</password>
+		<maxActive>200</maxActive>
+		<maxIdle>50</maxIdle>
+		<maxWait>10000</maxWait>
+		<validationQuery>select sysdate from dual</validationQuery>
+		<queryTimeout>60</queryTimeout>
+	</db>
+	<gpdb>
+		<name>GP_DB_POOL</name>
+		<type>javax.sql.DataSource</type>
+		<driverClassName>org.postgresql.Driver</driverClassName>
+		<url>jdbc:postgresql://192.168.0.110:5432/taurus</url>
+		<!--<driverClassName>sun.jdbc.odbc.JdbcOdbcDriver</driverClassName>
+		<url>jdbc:odbc:GP</url>-->
+		<user>gpadmin</user>
+		<password>gpadmin</password>
+		<maxActive>200</maxActive>
+		<maxIdle>50</maxIdle>
+		<maxWait>10000</maxWait>
+		<validationQuery></validationQuery>
+		<queryTimeout>60</queryTimeout>
+	</gpdb>
+	<task>
+	   	<usexml>false</usexml>
+	</task>
+	<module>
+		<web enable="on">
+			<charset>UTF-8</charset>
+			<port>8080</port>
+			<httpServer>
+				<class>web.server.Jetty</class>
+				<webapp>.\WebRoot</webapp>
+				<contextpath>/</contextpath>
+				<loglevel>INFO</loglevel>
+			</httpServer>
+		</web>
+
+		<alarm enable="off">
+			<senderBean>alarm.EMailAlarmSender</senderBean>
+			<filters>
+				<newAlarm>
+					<filter>alarm.insertrule.TimeFilter</filter>
+				</newAlarm>
+			</filters>
+		</alarm>
+
+		<dataFileLifecycle enable="off">
+			<fileExt>.utl_dc_flag</fileExt>
+			<lifecycle>4320</lifecycle>
+			<delWhenOff>false</delWhenOff>
+		</dataFileLifecycle>
+
+		<dataLog enable="on">               <!-- 是否开启数据库日志（on表示启用，off表示不启用），日志将插入UTL_DATA_LOG表 -->
+			<interval>10000000</interval>         <!-- 每产生100条日志就向数据库提交一次，该值可以自行设置 -->
+			<sqlldrMode>true</sqlldrMode>   <!-- true表示用sqlldr方式向数据库提交日志，false表示用普通方式（批量insert）提交 -->
+			<delTmpFile>true</delTmpFile>    <!-- sqlldr方式提交日志时，是否删除临时文件 -->
+		</dataLog>
+
+		<delayProbe enable="on">             <!-- 表示是否使用探针功能（on表示启用，off表示不启用） -->
+			<probeTimes>3</probeTimes>       <!-- 连续探测到几次数据平衡时，开始采集 -->
+			<interval>3</interval>           <!-- 隔几分钟探测一次 -->
+			<log>true</log>                  <!-- 是否记录探测日志，记录在程序的log/delay_log/目录下 -->
+		</delayProbe>
+		
+	</module>
+	<externalTool>
+		<traceFileter2Path>D:\\tools\\TraceFilter2.exe</traceFileter2Path>
+		<sqlldr>
+			<charset>ZHS16GBK</charset>
+			<isDelLog>false</isDelLog>
+			<readsize>1048576</readsize>
+		</sqlldr>
+		<mail>
+			<smtp_host></smtp_host>
+			<user></user>
+			<password></password>
+			<to></to>
+			<cc></cc>
+			<bcc />
+		</mail>
+	</externalTool>
+	<dt enable="on">
+		<isDelFile>false</isDelFile><!--是否删除汇总需要的原始文件-->
+		<DBServer>LEODB152</DBServer><!--路测原始数据库-->
+		<userid>utl</userid><!--路测原始数据库 登录用户名-->
+		<password>utl2011</password><!--路测原始数据库 登录用户密码-->
+	</dt>
+	<share enable="on"><!--是否开启共享功能模块，on开启，off关闭-->
+		<lastTime>2011-6-24</lastTime><!--开始上传文件的时间-->
+		<ftp enable="off">
+				<ip>192.168.0.200</ip><!--FTP服务器地址-->
+				<port>21</port><!--FTP服务器端口号-->
+				<user>ftp</user><!--FTP服务器用户名-->
+				<pwd>ftp</pwd><!--FTP服务器密码-->
+				<passiveMode>true</passiveMode><!--FTP服务器模式，是否为passive，是为true，否则为false -->
+				<encoding>UTF-8</encoding><!--FTP服务器编码-->
+				<remoteRootDT>DT</remoteRootDT><!--列表中的所有文件对应的FTP根目录-->
+				<remoteRootPM>PM</remoteRootPM><!--列表中的所有文件对应的FTP根目录-->
+		</ftp>
+		<check>
+			<username>user</username>
+			<password>pass</password>
+		</check>
+		<UteleCheckUrl>http://utl002-pc:8888/WebServiceTest/servlet/j_spring_security_check</UteleCheckUrl>
+		<UteleLoaderUrl>http://utl002-pc:8888/WebServiceTest/servlet/loader</UteleLoaderUrl>
+		<UteleLogoutUrl>http://utl002-pc:8888/WebServiceTest/servlet/j_spring_security_check</UteleLogoutUrl>
+  </share>
+  <specialapp>
+     <cdrindex>off</cdrindex>
+     <taurussocket>off</taurussocket>
+     <taurussms>13922890531</taurussms>
+  </specialapp>
+  <gp enable="on"><!--gp平台数据输出-->
+		<ftp><!--数据上传FTP配置-->
+				<ip>192.168.0.110</ip>
+				<port>21</port>
+				<user>gpftp</user>
+				<pwd>gpftp</pwd>
+				<passiveMode>true</passiveMode>
+				<encoding>UTF-8</encoding>
+				<remoteRootDT>DT</remoteRootDT>				
+				<remoteRootPM>PM</remoteRootPM>
+		</ftp>
+  </gp>
+</config>

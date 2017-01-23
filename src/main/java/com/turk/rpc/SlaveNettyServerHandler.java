@@ -106,7 +106,7 @@ public class SlaveNettyServerHandler extends ChannelInboundHandlerAdapter{
 				  		  log.debug("2003-MSG:任务已加入列表：" + json.toString());
 				  		  Client clt = new Client(SlaveConfig.getInstance().getMasterServer(),
 				  		    		SlaveConfig.getInstance().getMasterPort());
-				  		  String Result = clt.SendMsg(json.toString());
+				  		  String Result = clt.SendMsgNetty(json.toString());
 				  		  if(Result.equals("Done"))
 				  		  {
 				  		      log.debug("2003-MSG:["+obj.getTaskID()+"] Complete!");

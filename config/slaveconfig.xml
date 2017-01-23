@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<slaveconfig>
+	<master>
+		<server>127.0.0.1</server>
+		<port>9527</port>
+	</master>
+	<slave>
+		<server>127.0.0.1</server>
+		<port>9528</port>
+		<flag>1</flag>
+	</slave>
+</slaveconfig>

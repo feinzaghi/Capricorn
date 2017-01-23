@@ -4,6 +4,7 @@ import java.io.*;
 
 import org.apache.log4j.Logger;
 
+import com.turk.rpc.MessageToString;
 import com.turk.util.LogMgr;
 
 
@@ -23,6 +24,17 @@ public class Client {
 		this._ip = IP;
 		this._port = Port;
 		
+	}
+	
+	/**
+	 * 
+	 * @param msg
+	 * @return
+	 */
+	public String SendMsgNetty(String msg)
+	{
+		MessageToString backmsg = new MessageToString(_ip,_port,msg);
+		return backmsg.getReturnString();
 	}
 	
 	/**

@@ -58,7 +58,7 @@ public class SlaveActive implements Runnable{
 				logger.debug("1002-MSG£º" + jsonObject.toString());
 			    Client clt = new Client(SlaveConfig.getInstance().getMasterServer(),
 			    		SlaveConfig.getInstance().getMasterPort());
-			    String Result = clt.SendMsg(jsonObject.toString());
+			    String Result = clt.SendMsgNetty(jsonObject.toString());
 			    if(Result.equals("Done"))
 			    {
 			    	logger.debug("1002-MSG-["+reg.getServer()+"] send success!");

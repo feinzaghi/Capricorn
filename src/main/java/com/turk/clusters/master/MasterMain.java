@@ -61,18 +61,18 @@ public class MasterMain {
 		//加载bean
 		PBeanMgr.getInstance();
 
-		AlarmMgr.getInstance();
+		//AlarmMgr.getInstance();
 		
 		//ResourceManagerment.getInstance().start();
 
-		DataLifecycleMgr.getInstance().start();
+		//DataLifecycleMgr.getInstance().start();
 
 		//主节点
 		MasterMain.getInstance();
 		
 		//采集任务模块
-		ScanThread scanThread = ScanThread.getInstance();
-		scanThread.startScan();	
+		//ScanThread scanThread = ScanThread.getInstance();
+		//scanThread.startScan();	
 	}
 	
 	

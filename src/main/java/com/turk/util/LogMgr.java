@@ -16,7 +16,7 @@ public class LogMgr
 	private Logger systemLog;
 	private Logger errorLog;
 	//private static final String SYSTEMFILE = "../conf/log4j.properties";
-	private static String SYSTEMFILE = ".." + File.separator + "config" + 
+	private static String SYSTEMFILE = "." + File.separator + "config" + 
 	  File.separator + "log4j.properties";
 	
 	private LogMgr()
@@ -24,8 +24,8 @@ public class LogMgr
 		try
 		{
 			System.out.println(System.getProperties().getProperty("JAVALIB"));
-			SYSTEMFILE = System.getProperty("JAVALIB")
-					+ File.separator + "conf" + 
+			SYSTEMFILE = "."
+					+ File.separator + "config" + 
 					  File.separator + "log4j.properties";
 			//File f = new File(SYSTEMFILE);
 			//Document doc = DocumentBuilderFactory.newInstance().newDocumentBuilder().parse(f);

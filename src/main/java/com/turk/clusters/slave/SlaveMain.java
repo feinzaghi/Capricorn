@@ -135,7 +135,7 @@ public class SlaveMain {
 		log.debug("1001-MSG:" + jsonObject.toString());
 	    Client clt = new Client(SlaveConfig.getInstance().getMasterServer(),
 	    		SlaveConfig.getInstance().getMasterPort());
-	    String Result = clt.SendMsg(jsonObject.toString());
+	    String Result = clt.SendMsgNetty(jsonObject.toString());
 	    if(Result.equals("Done"))
 	    {
 	    	log.debug("1001-MSG:Slave["+reg.getServer()+"]×¢²á³É¹¦");

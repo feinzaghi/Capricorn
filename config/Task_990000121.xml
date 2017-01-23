@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><task>
+	<property>
+    <name>city_id</name>
+    <value>1001</value>
+    <description/>
+  </property>
+  
+  <property>
+    <name>deviceid</name>
+    <value>9900003</value>
+    <description/>
+  </property>
+  
+  <property>
+    <name>dev_name</name>
+    <value>中兴参数-09900001</value>
+    <description/>
+  </property>
+  
+  <property>
+    <name>host_ip</name>
+    <value>192.168.0.140</value>
+    <description/>
+  </property>
+  
+  <property>
+    <name>host_user</name>
+    <value>utlftp</value>
+    <description/>
+  </property>
+
+  <property>
+    <name>host_pwd</name>
+    <value>utlftp</value>
+    <description/>
+  </property>
+  
+  <property>
+    <name>encode</name>
+    <value>GBK</value>
+    <description/>
+  </property>
+
+	<property>
+    <name>host_sign</name>
+    <value/>
+    <description/>
+  </property>
+  
+  <property>
+    <name>devicename</name>
+    <value>09900003</value>
+    <description/>
+  </property>
+  
+  <property>
+    <name>vendor</name>
+    <value>ZY0804</value>
+    <description/>
+  </property>
+
+  <property>
+    <name>dbdriver</name>
+    <value/>
+    <description/>
+  </property>
+
+  <property>
+    <name>dburl</name>
+    <value/>
+    <description/>
+  </property>
+
+  <property>
+    <name>group_id</name>
+    <value/>
+    <description/>
+  </property>
+
+  <property>
+    <name>task_id</name>
+    <value>990000121</value>
+    <description/>
+  </property>
+   
+  <property>
+    <name>task_describe</name>
+    <value>共享平台-990000120-PARA-ZTE</value>
+    <description/>
+  </property>
+  
+  <property>
+    <name>dev_port</name>
+    <value>21</value>
+    <description/>
+  </property>
+  
+  <property>
+    <name>proxy_dev_port</name>
+    <value/>
+    <description/>
+  </property>
+
+  <property>
+    <name>collect_type</name>
+    <value>3</value>
+    <description/>
+  </property>
+
+  <property>
+    <name>collect_period</name>
+    <value>2</value>
+    <description/>
+  </property>
+
+  <property>
+    <name>collecttimeout</name>
+    <value>30</value>
+    <description/>
+  </property>
+
+  <property>
+    <name>parserid</name>
+    <value>1</value>
+    <description/>
+  </property>
+  
+  <property>
+    <name>distributorid</name>
+    <value>6</value>
+    <description/>
+  </property>
+
+  <property>
+    <name>redo_time_offset</name>
+    <value>90</value>
+    <description/>
+  </property>
+
+  <property>
+    <name>collect_time</name>
+    <value>30</value>
+    <description/>
+  </property>
+  
+  <property>
+    <name>collect_timepos</name>
+    <value>90</value>
+    <description/>
+  </property>
+
+  <property>
+    <name>prob_starttime</name>
+    <value>0</value>
+    <description/>
+  </property>
+
+  <property>
+    <name>collect_path</name>
+    <value>/ZTE/zte_cdma_config_%%Y%%M%%D.zip</value>
+    <description/>
+  </property>
+  
+  <property>
+    <name>shell_cmd_prepare</name>
+    <value/>
+    <description/>
+  </property>
+
+  <property>
+    <name>shell_cmd_finish</name>
+    <value/>
+    <description/>
+  </property>
+  
+  <property>
+    <name>shell_timeout</name>
+    <value>0</value>
+    <description/>
+  </property>
+
+  <property>
+    <name>parse_tmpid</name>
+    <value>4000013</value>
+    <description/>
+  </property>
+  
+  <property>
+    <name>tmptype_p</name>
+    <value>1</value>
+    <description/>
+  </property>
+
+  <property>
+    <name>tmpname_p</name>
+    <value>共享平台-中兴参数-解析模版</value>
+    <description/>
+  </property>
+  
+  <property>
+    <name>edition_p</name>
+    <value>V1</value>
+    <description/>
+  </property>
+  
+  <property>
+    <name>tempfilename_p</name>
+    <value>clt_shareplat_cm_zte_parse.xml</value>
+    <description/>
+  </property>
+
+  <property>
+    <name>distrbute_tmpid</name>
+    <value>4000014</value>
+    <description/>
+  </property>
+  
+  <property>
+    <name>tmptype_d</name>
+    <value>6</value>
+    <description/>
+  </property>
+
+
+  <property>
+    <name>tmpname_d</name>
+    <value>共享平台-中兴参数-分发模版</value>
+    <description/>
+  </property>
+
+
+  <property>
+    <name>edition_d</name>
+    <value>V1</value>
+    <description/>
+  </property>
+  
+  <property>
+    <name>tempfilename_d</name>
+    <value>clt_shareplat_cm_zte_dist.xml</value>
+    <description/>
+  </property>
+
+  <property>
+    <name>distrbute_tmpid</name>
+    <value>4000014</value>
+    <description/>
+  </property>
+  
+  <property>
+    <name>suc_data_time</name>
+    <value>2013-12-13 00:00:00</value>
+    <description/>
+  </property>
+
+  <property>
+    <name>end_data_time</name>
+    <value>2013-12-12 0:00:00</value>
+    <description/>
+  </property>
+  
+  <property>
+    <name>suc_data_pos</name>
+    <value>0</value>
+    <description/>
+  </property>
+
+  <property>
+    <name>maxclttime</name>
+    <value>-1</value>
+    <description/>
+  </property>
+
+  <property>
+    <name>blockedtime</name>
+    <value>0</value>
+    <description/>
+  </property>
+
+  <property>
+    <name>proxy_dev_id</name>
+    <value/>
+    <description/>
+  </property>
+
+  <property>
+    <name>proxy_dev_name</name>
+    <value/>
+    <description/>
+  </property>
+  
+  <property>
+    <name>proxy_host_ip</name>
+    <value/>
+    <description/>
+  </property>
+
+  <property>
+    <name>proxy_host_user</name>
+    <value/>
+    <description/>
+  </property>
+  
+  <property>
+    <name>proxy_host_pwd</name>
+    <value/>
+    <description/>
+  </property>
+
+  <property>
+    <name>proxy_host_sign</name>
+    <value/>
+    <description/>
+  </property>
+
+  <property>
+    <name>threadsleeptime</name>
+    <value>0</value>
+    <description/>
+  </property>
+
+  <property>
+    <name>indbserver</name>
+    <value>192.168.0.110</value>
+    <description/>
+  </property>
+  
+  <property>
+    <name>indbuser</name>
+    <value>gpftp</value>
+    <description/>
+  </property>
+  
+  <property>
+    <name>indbpassword</name>
+    <value>gpftp</value>
+    <description/>
+  </property>
+
+</task>

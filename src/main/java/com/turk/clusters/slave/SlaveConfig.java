@@ -20,7 +20,7 @@ private PropertiesXML propertiesXML;
 	/**
 	 * ≈‰÷√Œƒº˛
 	 */
-	private static final String SLAVEFILE = "." + File.separator + "conf" + 
+	private static final String SLAVEFILE = "." + File.separator + "config" + 
     	File.separator + "slaveconfig.xml";
 	
 	private static final Logger logger = LogMgr.getInstance().getAppLogger("slave");

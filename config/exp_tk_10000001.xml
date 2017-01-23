@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<task>
+	<property>
+    <name>city_id</name>
+    <value></value>
+    <description></description>
+  </property>
+  
+  <property>
+    <name>deviceid</name>
+    <value></value>
+    <description></description>
+  </property>
+  
+  <property>
+    <name>dev_name</name>
+    <value></value>
+    <description></description>
+  </property>
+  
+  <property>
+    <name>host_ip</name>
+    <value></value>
+    <description></description>
+  </property>
+  
+  <property>
+    <name>host_user</name>
+    <value></value>
+    <description></description>
+  </property>
+
+  <property>
+    <name>host_pwd</name>
+    <value></value>
+    <description></description>
+  </property>
+  
+  <property>
+    <name>encode</name>
+    <value></value>
+    <description></description>
+  </property>
+
+	<property>
+    <name>host_sign</name>
+    <value></value>
+    <description></description>
+  </property>
+  
+  <property>
+    <name>devicename</name>
+    <value></value>
+    <description></description>
+  </property>
+  
+  <property>
+    <name>vendor</name>
+    <value></value>
+    <description></description>
+  </property>
+
+  <property>
+    <name>dbdriver</name>
+    <value></value>
+    <description></description>
+  </property>
+
+  <property>
+    <name>dburl</name>
+    <value></value>
+    <description></description>
+  </property>
+
+  <property>
+    <name>group_id</name>
+    <value></value>
+    <description></description>
+  </property>
+
+  <property>
+    <name>task_id</name>
+    <value></value>
+    <description></description>
+  </property>
+   
+  <property>
+    <name>task_describe</name>
+    <value></value>
+    <description></description>
+  </property>
+  
+  <property>
+    <name>dev_port</name>
+    <value></value>
+    <description></description>
+  </property>
+  
+  <property>
+    <name>proxy_dev_port</name>
+    <value></value>
+    <description></description>
+  </property>
+
+  <property>
+    <name>collect_type</name>
+    <value></value>
+    <description></description>
+  </property>
+
+  <property>
+    <name>collect_period</name>
+    <value></value>
+    <description></description>
+  </property>
+
+  <property>
+    <name>collecttimeout</name>
+    <value></value>
+    <description></description>
+  </property>
+
+  <property>
+    <name>parserid</name>
+    <value></value>
+    <description></description>
+  </property>
+  
+  <property>
+    <name>distributorid</name>
+    <value></value>
+    <description></description>
+  </property>
+
+  <property>
+    <name>redo_time_offset</name>
+    <value></value>
+    <description></description>
+  </property>
+
+  <property>
+    <name>collect_time</name>
+    <value></value>
+    <description></description>
+  </property>
+  
+  <property>
+    <name>collect_timepos</name>
+    <value></value>
+    <description></description>
+  </property>
+
+  <property>
+    <name>prob_starttime</name>
+    <value></value>
+    <description></description>
+  </property>
+
+  <property>
+    <name>collect_path</name>
+    <value></value>
+    <description></description>
+  </property>
+  
+  <property>
+    <name>shell_cmd_prepare</name>
+    <value></value>
+    <description></description>
+  </property>
+
+  <property>
+    <name>shell_cmd_finish</name>
+    <value></value>
+    <description></description>
+  </property>
+  
+  <property>
+    <name>shell_timeout</name>
+    <value></value>
+    <description></description>
+  </property>
+
+  <property>
+    <name>parse_tmpid</name>
+    <value></value>
+    <description></description>
+  </property>
+  
+  <property>
+    <name>tmptype_p</name>
+    <value></value>
+    <description></description>
+  </property>
+
+  <property>
+    <name>tmpname_p</name>
+    <value></value>
+    <description></description>
+  </property>
+  
+  <property>
+    <name>edition_p</name>
+    <value></value>
+    <description></description>
+  </property>
+  
+  <property>
+    <name>tempfilename_p</name>
+    <value></value>
+    <description></description>
+  </property>
+
+  <property>
+    <name>distrbute_tmpid</name>
+    <value></value>
+    <description></description>
+  </property>
+  
+  <property>
+    <name>tmptype_d</name>
+    <value></value>
+    <description></description>
+  </property>
+
+
+  <property>
+    <name>tmpname_d</name>
+    <value></value>
+    <description></description>
+  </property>
+
+
+  <property>
+    <name>edition_d</name>
+    <value></value>
+    <description></description>
+  </property>
+  
+  <property>
+    <name>tempfilename_d</name>
+    <value></value>
+    <description></description>
+  </property>
+
+  <property>
+    <name>distrbute_tmpid</name>
+    <value></value>
+    <description></description>
+  </property>
+  
+  <property>
+    <name>suc_data_time</name>
+    <value></value>
+    <description></description>
+  </property>
+
+  <property>
+    <name>end_data_time</name>
+    <value></value>
+    <description></description>
+  </property>
+  
+  <property>
+    <name>suc_data_pos</name>
+    <value></value>
+    <description></description>
+  </property>
+
+  <property>
+    <name>maxclttime</name>
+    <value></value>
+    <description></description>
+  </property>
+
+  <property>
+    <name>blockedtime</name>
+    <value></value>
+    <description></description>
+  </property>
+
+  <property>
+    <name>proxy_dev_id</name>
+    <value></value>
+    <description></description>
+  </property>
+
+  <property>
+    <name>proxy_dev_name</name>
+    <value></value>
+    <description></description>
+  </property>
+  
+  <property>
+    <name>proxy_host_ip</name>
+    <value></value>
+    <description></description>
+  </property>
+
+  <property>
+    <name>proxy_host_user</name>
+    <value></value>
+    <description></description>
+  </property>
+  
+  <property>
+    <name>proxy_host_pwd</name>
+    <value></value>
+    <description></description>
+  </property>
+
+  <property>
+    <name>proxy_host_sign</name>
+    <value></value>
+    <description></description>
+  </property>
+
+  <property>
+    <name>threadsleeptime</name>
+    <value></value>
+    <description></description>
+  </property>
+
+  <property>
+    <name>indbserver</name>
+    <value></value>
+    <description></description>
+  </property>
+  
+  <property>
+    <name>indbuser</name>
+    <value></value>
+    <description></description>
+  </property>
+  
+  <property>
+    <name>indbpassword</name>
+    <value></value>
+    <description></description>
+  </property>
+
+</task>

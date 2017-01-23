@@ -63,14 +63,17 @@ public class MasterNettyServerHandler extends ChannelInboundHandlerAdapter{
 			case 1001://注册信息
 				Register reg1 = new Register();
 				TaskManage.getInstance().NodeRegister(reg1.getByJson(msgBody));
+				strReturn = "Done";
 				break;
 			case 1002://报活同步消息
 				Register reg2 = new Register();
 				TaskManage.getInstance().UpdateSlaveStatus(reg2.getByJson(msgBody));
+				strReturn = "Done";
 				break;
 			case 1003://节点通知关闭
 				Register reg3 = new Register();
 				TaskManage.getInstance().UpdateSlaveStatus(reg3.getByJson(msgBody));
+				strReturn = "Done";
 				break;
 			case 2002://任务完成
 				TaskMsg task = new TaskMsg();
@@ -87,6 +90,7 @@ public class MasterNettyServerHandler extends ChannelInboundHandlerAdapter{
 						log.warn("Task Obj ["+key+"] is not exist!");
 					slave2.setCurrentCltCount(slave2.getCurrentCltCount() - 1);
 				}
+				strReturn = "Done";
 				break;	
 			case 2003://通知任务发送成功
 				TaskMsg taskruning = new TaskMsg();
@@ -101,6 +105,7 @@ public class MasterNettyServerHandler extends ChannelInboundHandlerAdapter{
 					slave3.setCurrentCltCount(slave3.getCurrentCltCount() + 1);
 					log.debug("Task:2003:["+key+"]["+ slave3.getServer() +"] Success!");
 				}
+				strReturn = "Done";
 				break;	
 			default:
 				break;	  

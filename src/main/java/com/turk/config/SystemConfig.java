@@ -39,21 +39,21 @@ public class SystemConfig
 	/**
 	 * ≈‰÷√Œƒº˛
 	 */
-	private static String SYSTEMFILE = "." + File.separator + "conf" + 
+	private static String SYSTEMFILE = "." + File.separator + "config" + 
     	File.separator + "config.xml";
   //private static final String SYSTEMFILE = "C:\\config.xml";
   
 
 	private static final Logger logger = LogMgr.getInstance().getSystemLogger();
 
-	private static SystemConfig instance = null;
+	private static SystemConfig Instance = null;
 	private String realDbUser;
 	private String realDbPwd;
 
 	private SystemConfig()
     	throws SystemConfigException
     {
-		SYSTEMFILE = System.getProperty("JAVALIB") + File.separator + "conf" + 
+		SYSTEMFILE = "." + File.separator + "config" + 
 		    	File.separator + "config.xml";
 		this.propertiesXML = new PropertiesXML(SYSTEMFILE);
 
@@ -61,11 +61,11 @@ public class SystemConfig
 
 	public static SystemConfig getInstance()
 	{
-		if (instance == null)
+		if (Instance == null)
 		{
 			try
 			{
-				instance = new SystemConfig();
+				Instance = new SystemConfig();
 			}
 			catch (SystemConfigException e)
 			{
@@ -73,12 +73,12 @@ public class SystemConfig
 				return null;
 			}
 		}
-		return instance;
+		return Instance;
 	}
 
 	public static void setInstance(SystemConfig instance)
 	{
-		instance = instance;
+		Instance = instance;
 	}
 
 	public String getPoolName()
