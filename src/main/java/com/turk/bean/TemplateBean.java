@@ -1,4 +1,5 @@
-package com.turk.framework;
+package com.turk.bean;
+
 
 class TemplateBean extends PBean
 {

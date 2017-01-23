@@ -434,4 +434,17 @@
 			<bean>templet.siemens.GRC90PMTempletP</bean>
 		</template>
 	</templates>
+	
+	<slave>
+		<slaveexecute id="2001">
+			<name>task-execute</name>
+			<des>task-execute</des>
+			<bean>com.turk.clusters.slave.TaskExecute</bean>
+		</slaveexecute>
+		<slaveexecute id="2003">
+			<name>task-stat-execute</name>
+			<des>task-stat-execute</des>
+			<bean>com.turk.clusters.slave.StatTaskExecute</bean>
+		</slaveexecute>
+	</slave>
 </pbeans>

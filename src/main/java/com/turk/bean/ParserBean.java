@@ -1,4 +1,4 @@
-package com.turk.framework;
+package com.turk.bean;
 
 class ParserBean extends PBean
 {

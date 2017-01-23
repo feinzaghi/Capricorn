@@ -4,14 +4,10 @@ import java.io.IOException;
 
 import org.apache.log4j.Logger;
 
-import com.turk.clusters.master.ScanThread;
-
 import com.turk.util.Util;
-import com.turk.alarm.AlarmMgr;
 import com.turk.util.LogMgr;
+import com.turk.bean.PBeanMgr;
 import com.turk.console.ConsoleMgr;
-import com.turk.framework.DataLifecycleMgr;
-import com.turk.framework.PBeanMgr;
 import com.turk.framework.SelfTest;
 import com.turk.framework.Version;
 

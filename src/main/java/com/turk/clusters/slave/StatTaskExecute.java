@@ -3,10 +3,9 @@ package com.turk.clusters.slave;
 import org.apache.log4j.Logger;
 
 import com.turk.clusters.model.StatTaskInfo;
-
 import com.turk.util.LogMgr;
 
-public class StatTaskExecute {
+public class StatTaskExecute implements IExecute{
 
 	private Logger log = LogMgr.getInstance().getSystemLogger();
 	
@@ -14,8 +13,9 @@ public class StatTaskExecute {
 	 * 执行采集
 	 * @param info
 	 */
-	public void Execute(StatTaskInfo info)
+	public boolean Execute(Object object)
 	{
+		StatTaskInfo info = (StatTaskInfo)object;
 		switch(info.getTaskType())
 		{
 			case 1://路测：
@@ -26,7 +26,8 @@ public class StatTaskExecute {
 				//		info.getFTPPath());
 				break;
 			default:
-				return;
+				return true;
 		}
+		return true;
 	}
 }

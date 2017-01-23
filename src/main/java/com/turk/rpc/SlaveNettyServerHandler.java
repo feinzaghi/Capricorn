@@ -17,6 +17,7 @@ import com.turk.clusters.model.Register;
 import com.turk.clusters.model.SlaveInfo;
 import com.turk.clusters.model.StatTaskInfo;
 import com.turk.clusters.model.TaskMsg;
+import com.turk.clusters.slave.IExecute;
 import com.turk.clusters.slave.SlaveActive;
 import com.turk.clusters.slave.SlaveConfig;
 import com.turk.clusters.slave.StatTaskExecute;
@@ -26,6 +27,7 @@ import com.turk.console.ConsoleMgr;
 import com.turk.datalog.DataLogMgr;
 import com.turk.db.GPDBPool;
 import com.turk.framework.DataLifecycleMgr;
+import com.turk.framework.Factory;
 import com.turk.socket.Client;
 import com.turk.task.TaskMgr;
 import com.turk.util.CommonDB;
@@ -78,6 +80,9 @@ public class SlaveNettyServerHandler extends ChannelInboundHandlerAdapter{
 		String strReturn = "";
 		//服务器端消息列表
 		//节点接收任务编号列表
+		
+		  IExecute exe = Factory.createSlaveExecute(MsgID);
+		
 		  switch(MsgID)
 		  {
 		      case 2001://采集新任务
@@ -93,7 +98,6 @@ public class SlaveNettyServerHandler extends ChannelInboundHandlerAdapter{
 		    	  obj = obj.getByJson(msgBody);
 		    	  if(obj != null)
 		    	  {
-			    	  TaskExecute exe = new TaskExecute();
 			    	  if(exe.Execute(obj))
 			    	  {
 			    		  log.debug("Task:[" + obj.getTaskID() +"] Start....");	
@@ -127,7 +131,6 @@ public class SlaveNettyServerHandler extends ChannelInboundHandlerAdapter{
 		    	  objstat = objstat.getByJson(msgBody);
 		    	  if(objstat != null)
 		    	  {
-			    	  StatTaskExecute exe = new StatTaskExecute();
 			    	  exe.Execute(objstat);
 			    	  log.debug("StatTask:[" + objstat.getID() +"] Start....");
 		    	  }

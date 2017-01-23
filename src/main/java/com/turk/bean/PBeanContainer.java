@@ -1,4 +1,4 @@
-package com.turk.framework;
+package com.turk.bean;
 
 import java.util.HashMap;
 import java.util.Map;

@@ -7,21 +7,23 @@ import org.apache.log4j.Logger;
 import com.turk.clusters.common.ReTaskObjInfo;
 import com.turk.clusters.common.TaskObjInfoForSlave;
 import com.turk.clusters.model.TaskMsg;
-
 import com.turk.util.LogMgr;
 
-public class TaskExecute {
+public class TaskExecute implements IExecute{
 
 	private Logger log = LogMgr.getInstance().getAppLogger("slave");
 	private Logger errorlog = LogMgr.getInstance().getErrorLogger();
+	
 	
 	/**
 	 * 执行采集
 	 * @param info
 	 */
-	public boolean Execute(TaskMsg info)
+	public boolean Execute(Object object)
 	{
-		try {			
+		try {
+			
+			TaskMsg info = (TaskMsg)object;
 			//构建任务
 			if(info.getIsReCLT() == 0)
 			{//正常采集任务
@@ -46,7 +48,11 @@ public class TaskExecute {
 			return false;
 		}
 	}
+
+
 	
+
+
 	
 	
 }

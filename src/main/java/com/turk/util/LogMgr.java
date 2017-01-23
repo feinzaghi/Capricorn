@@ -23,7 +23,7 @@ public class LogMgr
 	{
 		try
 		{
-			System.out.println(System.getProperties().getProperty("JAVALIB"));
+			//System.out.println(System.getProperties().getProperty("JAVALIB"));
 			SYSTEMFILE = "."
 					+ File.separator + "config" + 
 					  File.separator + "log4j.properties";
@@ -32,7 +32,7 @@ public class LogMgr
 			//Element log4jEl = (Element)doc.getDocumentElement().getElementsByTagName("log4j").item(0);
 			//log4jEl = (Element)log4jEl.getElementsByTagName("log4j:configuration").item(0);
 			//DOMConfigurator.configure(log4jEl);
-			System.out.println(SYSTEMFILE);
+			//System.out.println(SYSTEMFILE);
 			PropertyConfigurator.configure(SYSTEMFILE);
 			this.systemLog = Logger.getLogger("system");
 			this.errorLog = Logger.getLogger("error");

@@ -3,6 +3,8 @@ package com.turk.framework;
 import org.apache.log4j.Logger;
 
 import com.turk.access.AbstractAccessor;
+import com.turk.bean.PBeanMgr;
+import com.turk.clusters.slave.IExecute;
 import com.turk.distributor.Distribute;
 import com.turk.parser.Parser;
 import com.turk.task.CollectObjInfo;
@@ -76,6 +78,15 @@ public class Factory
 			return null;
 		d.init(obj);
 
+		return d;
+	}
+	
+	public static IExecute createSlaveExecute(int id)
+	{
+		
+		IExecute d = PBeanMgr.getInstance().getSlaveBean(id);
+		if (d == null)
+			return null;
 		return d;
 	}
 

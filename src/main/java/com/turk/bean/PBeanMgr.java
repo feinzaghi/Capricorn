@@ -1,4 +1,4 @@
-package com.turk.framework;
+package com.turk.bean;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -9,6 +9,7 @@ import org.dom4j.Element;
 import org.dom4j.io.SAXReader;
 
 import com.turk.access.AbstractAccessor;
+import com.turk.clusters.slave.IExecute;
 import com.turk.distributor.Distribute;
 import com.turk.parser.Parser;
 import com.turk.templet.AbstractTempletBase;
@@ -37,9 +38,14 @@ public class PBeanMgr
 	private PBeanContainer<DistributorBean> distributorBeans;
 	
 	/**
+	 * 节点执行方法
+	 */
+	private PBeanContainer<SlaveBean> slaveBeans;
+	
+	/**
 	 * 配置文件路径
 	 */
-	private static final String configFilePath = "." + File.separator + "conf" + 
+	private static final String configFilePath = "." + File.separator + "config" + 
     	File.separator + "pbean.xml";
 	private Document doc;
 	private static PBeanMgr instance = null;
@@ -51,6 +57,8 @@ public class PBeanMgr
 		this.parserBeans = new PBeanContainer<ParserBean>();
 		this.templateBeans = new PBeanContainer<TemplateBean>();
 		this.distributorBeans = new PBeanContainer<DistributorBean>();
+		this.slaveBeans = new PBeanContainer<SlaveBean>();
+
 
 		init();
 	}
@@ -85,6 +93,7 @@ public class PBeanMgr
 		loadPBean("/pbeans/parsers/parser", this.parserBeans, ParserBean.class);
     	loadPBean("/pbeans/distributors/distributor", this.distributorBeans, DistributorBean.class);
     	loadPBean("/pbeans/templates/template", this.templateBeans, TemplateBean.class);
+    	loadPBean("/pbeans/slave/slaveexecute", this.slaveBeans, SlaveBean.class);
 	}
 
 	@SuppressWarnings("unchecked")
@@ -207,6 +216,11 @@ public class PBeanMgr
 	{
 		return this.distributorBeans.getBeanByID(id);
 	}
+	
+	public String getSlaveExecuteBeanName(int id)
+	{
+		return this.slaveBeans.getBeanByID(id);
+	}
 
 	public Distribute getDistributorBean(int id)
 	{
@@ -229,6 +243,15 @@ public class PBeanMgr
 			return null;
 		}
 		return (AbstractTempletBase)toObject(beanClass);
+	}
+	
+	public IExecute getSlaveBean(int id)
+	{
+		String beanClass = getDistributorBeanName(id);
+		if (beanClass == null) {
+			return null;
+		}
+		return (IExecute)toObject(beanClass);
 	}
 
 	private Object toObject(String className)
