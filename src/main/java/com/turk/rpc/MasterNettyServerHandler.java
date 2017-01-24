@@ -9,10 +9,13 @@ import net.sf.json.JSONObject;
 import org.apache.commons.beanutils.PropertyUtils;
 import org.apache.log4j.Logger;
 
+import com.turk.clusters.common.IExecute;
+import com.turk.clusters.master.AbstractMasterExecute;
 import com.turk.clusters.master.TaskManage;
 import com.turk.clusters.model.Register;
 import com.turk.clusters.model.SlaveInfo;
 import com.turk.clusters.model.TaskMsg;
+import com.turk.framework.Factory;
 
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.Unpooled;
@@ -57,19 +60,23 @@ public class MasterNettyServerHandler extends ChannelInboundHandlerAdapter{
 //		
 //		//
 		String strReturn = "";
+		
+		AbstractMasterExecute exe = Factory.createMasterExecute(MsgID);
+		strReturn = exe.Execute(msgBody);
+		  
 		//服务器端消息列表
 		switch(MsgID)
 		{
-			case 1001://注册信息
-				Register reg1 = new Register();
-				TaskManage.getInstance().NodeRegister(reg1.getByJson(msgBody));
-				strReturn = "Done";
-				break;
-			case 1002://报活同步消息
-				Register reg2 = new Register();
-				TaskManage.getInstance().UpdateSlaveStatus(reg2.getByJson(msgBody));
-				strReturn = "Done";
-				break;
+//			case 1001://注册信息
+//				Register reg1 = new Register();
+//				TaskManage.getInstance().NodeRegister(reg1.getByJson(msgBody));
+//				strReturn = "Done";
+//				break;
+//			case 1002://报活同步消息
+//				Register reg2 = new Register();
+//				TaskManage.getInstance().UpdateSlaveStatus(reg2.getByJson(msgBody));
+//				strReturn = "Done";
+//				break;
 			case 1003://节点通知关闭
 				Register reg3 = new Register();
 				TaskManage.getInstance().UpdateSlaveStatus(reg3.getByJson(msgBody));

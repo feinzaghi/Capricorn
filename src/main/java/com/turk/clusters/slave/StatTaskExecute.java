@@ -2,6 +2,7 @@ package com.turk.clusters.slave;
 
 import org.apache.log4j.Logger;
 
+import com.turk.clusters.common.IExecute;
 import com.turk.clusters.model.StatTaskInfo;
 import com.turk.util.LogMgr;
 

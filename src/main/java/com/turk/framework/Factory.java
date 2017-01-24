@@ -4,7 +4,8 @@ import org.apache.log4j.Logger;
 
 import com.turk.access.AbstractAccessor;
 import com.turk.bean.PBeanMgr;
-import com.turk.clusters.slave.IExecute;
+import com.turk.clusters.common.IExecute;
+import com.turk.clusters.master.AbstractMasterExecute;
 import com.turk.distributor.Distribute;
 import com.turk.parser.Parser;
 import com.turk.task.CollectObjInfo;
@@ -85,6 +86,15 @@ public class Factory
 	{
 		
 		IExecute d = PBeanMgr.getInstance().getSlaveBean(id);
+		if (d == null)
+			return null;
+		return d;
+	}
+	
+	public static AbstractMasterExecute createMasterExecute(int id)
+	{
+		
+		AbstractMasterExecute d = PBeanMgr.getInstance().getMasterBean(id);
 		if (d == null)
 			return null;
 		return d;

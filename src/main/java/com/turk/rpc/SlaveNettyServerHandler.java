@@ -12,12 +12,12 @@ import org.apache.log4j.Logger;
 import com.turk.alarm.AlarmMgr;
 import com.turk.alarm.ProcessStatus;
 import com.turk.app.appinterface;
+import com.turk.clusters.common.IExecute;
 import com.turk.clusters.master.TaskManage;
 import com.turk.clusters.model.Register;
 import com.turk.clusters.model.SlaveInfo;
 import com.turk.clusters.model.StatTaskInfo;
 import com.turk.clusters.model.TaskMsg;
-import com.turk.clusters.slave.IExecute;
 import com.turk.clusters.slave.SlaveActive;
 import com.turk.clusters.slave.SlaveConfig;
 import com.turk.clusters.slave.StatTaskExecute;
@@ -80,10 +80,10 @@ public class SlaveNettyServerHandler extends ChannelInboundHandlerAdapter{
 		String strReturn = "";
 		//服务器端消息列表
 		//节点接收任务编号列表
-		  IExecute exe = Factory.createSlaveExecute(MsgID);
-		  exe.Execute(msgBody);
-		  switch(MsgID)
-		  {
+		IExecute exe = Factory.createSlaveExecute(MsgID);
+		strReturn = exe.Execute(msgBody);
+		switch(MsgID)
+		{
 //		      case 2001://采集新任务
 //		    	  
 //		    	  if(ThreadPool.getInstance().getThreadQueueCount()>100)

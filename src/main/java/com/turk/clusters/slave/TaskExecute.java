@@ -6,6 +6,7 @@ import net.sf.json.JSONObject;
 
 import org.apache.log4j.Logger;
 
+import com.turk.clusters.common.IExecute;
 import com.turk.clusters.common.ReTaskObjInfo;
 import com.turk.clusters.common.TaskObjInfoForSlave;
 import com.turk.clusters.model.TaskMsg;

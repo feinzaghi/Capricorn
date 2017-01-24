@@ -9,7 +9,8 @@ import org.dom4j.Element;
 import org.dom4j.io.SAXReader;
 
 import com.turk.access.AbstractAccessor;
-import com.turk.clusters.slave.IExecute;
+import com.turk.clusters.common.IExecute;
+import com.turk.clusters.master.AbstractMasterExecute;
 import com.turk.distributor.Distribute;
 import com.turk.parser.Parser;
 import com.turk.templet.AbstractTempletBase;
@@ -43,6 +44,11 @@ public class PBeanMgr
 	private PBeanContainer<SlaveBean> slaveBeans;
 	
 	/**
+	 * 主节点执行方法
+	 */
+	private PBeanContainer<MasterBean> masterBeans;
+	
+	/**
 	 * 配置文件路径
 	 */
 	private static final String configFilePath = "." + File.separator + "config" + 
@@ -58,6 +64,7 @@ public class PBeanMgr
 		this.templateBeans = new PBeanContainer<TemplateBean>();
 		this.distributorBeans = new PBeanContainer<DistributorBean>();
 		this.slaveBeans = new PBeanContainer<SlaveBean>();
+		this.masterBeans = new PBeanContainer<MasterBean>();
 
 
 		init();
@@ -94,6 +101,7 @@ public class PBeanMgr
     	loadPBean("/pbeans/distributors/distributor", this.distributorBeans, DistributorBean.class);
     	loadPBean("/pbeans/templates/template", this.templateBeans, TemplateBean.class);
     	loadPBean("/pbeans/slave/slaveexecute", this.slaveBeans, SlaveBean.class);
+    	loadPBean("/pbeans/master/masterexecute", this.masterBeans, MasterBean.class);
 	}
 
 	@SuppressWarnings("unchecked")
@@ -221,6 +229,11 @@ public class PBeanMgr
 	{
 		return this.slaveBeans.getBeanByID(id);
 	}
+	
+	public String getMasterExecuteBeanName(int id)
+	{
+		return this.masterBeans.getBeanByID(id);
+	}
 
 	public Distribute getDistributorBean(int id)
 	{
@@ -247,11 +260,20 @@ public class PBeanMgr
 	
 	public IExecute getSlaveBean(int id)
 	{
-		String beanClass = getDistributorBeanName(id);
+		String beanClass = getSlaveExecuteBeanName(id);
 		if (beanClass == null) {
 			return null;
 		}
 		return (IExecute)toObject(beanClass);
+	}
+	
+	public AbstractMasterExecute getMasterBean(int id)
+	{
+		String beanClass = getMasterExecuteBeanName(id);
+		if (beanClass == null) {
+			return null;
+		}
+		return (AbstractMasterExecute)toObject(beanClass);
 	}
 
 	private Object toObject(String className)

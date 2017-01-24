@@ -1,4 +1,4 @@
-package com.turk.clusters.slave;
+package com.turk.clusters.common;
 
 /**
  * 
