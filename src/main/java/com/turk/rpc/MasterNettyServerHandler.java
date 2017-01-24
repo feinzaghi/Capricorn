@@ -77,11 +77,11 @@ public class MasterNettyServerHandler extends ChannelInboundHandlerAdapter{
 //				TaskManage.getInstance().UpdateSlaveStatus(reg2.getByJson(msgBody));
 //				strReturn = "Done";
 //				break;
-			case 1003://节点通知关闭
-				Register reg3 = new Register();
-				TaskManage.getInstance().UpdateSlaveStatus(reg3.getByJson(msgBody));
-				strReturn = "Done";
-				break;
+//			case 1003://节点通知关闭
+//				Register reg3 = new Register();
+//				TaskManage.getInstance().UpdateSlaveStatus(reg3.getByJson(msgBody));
+//				strReturn = "Done";
+//				break;
 			case 2002://任务完成
 				TaskMsg task = new TaskMsg();
 				task = task.getByJson(msgBody);

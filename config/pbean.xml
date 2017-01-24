@@ -446,6 +446,11 @@
 			<des>task-stat-execute</des>
 			<bean>com.turk.clusters.slave.StatTaskExecute</bean>
 		</slaveexecute>
+		<slaveexecute id="9999">
+			<name>ShutdownExecute</name>
+			<des>ShutdownExecute</des>
+			<bean>com.turk.clusters.slave.ShutdownExecute</bean>
+		</slaveexecute>
 	</slave>
 	
 	<master>
@@ -458,6 +463,11 @@
 			<name>NodeActive</name>
 			<des>NodeActive</des>
 			<bean>com.turk.clusters.master.NodeActive</bean>
+		</masterexecute>
+		<masterexecute id="1003">
+			<name>NodeShutdown</name>
+			<des>NodeShutdown</des>
+			<bean>com.turk.clusters.master.NodeShutdown</bean>
 		</masterexecute>
 	</master>
 </pbeans>

@@ -71,12 +71,7 @@ public class SlaveNettyServerHandler extends ChannelInboundHandlerAdapter{
 			// TODO Auto-generated catch block
 			log.error("Master,Json ERROR",e);
 		}
-//		InetSocketAddress insocket = (InetSocketAddress) ctx.channel()
-//                .remoteAddress();
-//        String clientIP = insocket.getAddress().getHostAddress();
-		
-//		
-//		//
+
 		String strReturn = "";
 		//服务器端消息列表
 		//节点接收任务编号列表
@@ -134,17 +129,17 @@ public class SlaveNettyServerHandler extends ChannelInboundHandlerAdapter{
 //			    	  log.debug("StatTask:[" + objstat.getID() +"] Start....");
 //		    	  }
 //		    	  break;
-		      case 9999:
-		    	  shutdown();
-//		    	  pw.println("Done");//返回客户端信息
-//			      pw.flush();
-		    	  log.debug("Close console service.");
-				  ConsoleMgr.getInstance(SystemConfig.getInstance().getCollectPort()).stop();
-				  log.debug("exit!");
-				  System.exit(0);
-		    	  return;
-		      default:
-		    	  break;	  
+//		      case 9999:
+//		    	  shutdown();
+////		    	  pw.println("Done");//返回客户端信息
+////			      pw.flush();
+//		    	  log.debug("Close console service.");
+//				  ConsoleMgr.getInstance(SystemConfig.getInstance().getCollectPort()).stop();
+//				  log.debug("exit!");
+//				  System.exit(0);
+//		    	  return;
+//		      default:
+//		    	  break;	  
 		  }
 		
 		//strReturn = strReturn + "Done";
@@ -179,51 +174,5 @@ public class SlaveNettyServerHandler extends ChannelInboundHandlerAdapter{
 		ctx.close();
 	}
 	
-	 private void shutdown()
-	  {
-		  log.debug("receive shutdown command");
-		  ThreadPool.getInstance().stoptask();//停止已实现stop方法的任务
-		  SlaveActive.getInstance().Stop();
-		  while(TaskMgr.getInstance().size() > 0)
-		  {
-			  try 
-			  {
-					Thread.sleep(10000L);
-					log.debug("waiting for stop");
-							
-			  } catch (InterruptedException e) {
-							// TODO Auto-generated catch block
-					e.printStackTrace();
-			  }
-		  }
-					
-					log.debug("No task running,close thread pool.");
-
-					ThreadPool.getInstance().destroy();
-
-					if(SystemConfig.getInstance().isEnableRunDTStatistic())
-					{
-						//反射
-						try
-						{
-							appinterface appdt = ((appinterface)Class.forName("DT.DTMain").newInstance()).getInstance();
-							appdt.Shutdown();
-						}
-						catch (Exception e)
-						{
-							e.printStackTrace();
-						}
-					}
-					
-					ProcessStatus.getInstance().stopScan();
-					
-					DataLifecycleMgr.getInstance().stop();
-					AlarmMgr.getInstance().shutdown();
-					DataLogMgr.getInstance().commit();
-					LogMgr.getInstance().getDBLogger().dispose();
-					log.debug("Close DB Pool.");
-					CommonDB.closeDbConnection();
-					DbPool.close();
-					GPDBPool.close();
-	  }
+	 
 }
