@@ -80,61 +80,60 @@ public class SlaveNettyServerHandler extends ChannelInboundHandlerAdapter{
 		String strReturn = "";
 		//服务器端消息列表
 		//节点接收任务编号列表
-		
 		  IExecute exe = Factory.createSlaveExecute(MsgID);
-		
+		  exe.Execute(msgBody);
 		  switch(MsgID)
 		  {
-		      case 2001://采集新任务
-		    	  
-		    	  if(ThreadPool.getInstance().getThreadQueueCount()>100)
-		    	  {
-//		    		  pw.println("NO");//返回客户端信息
-//				      pw.flush();
-//				      return;
-		    		  strReturn = "NO";
-		    	  }
-		    	  TaskMsg obj = new TaskMsg();
-		    	  obj = obj.getByJson(msgBody);
-		    	  if(obj != null)
-		    	  {
-			    	  if(exe.Execute(obj))
-			    	  {
-			    		  log.debug("Task:[" + obj.getTaskID() +"] Start....");	
-			    		  TaskMsg task = new TaskMsg();
-				  		  task.setMsgID(2003);//通知主控，任务已加入列表，请主控从任务列表中删除该任务
-				  		  task.setTaskID(obj.getTaskID());
-				  		  task.setObjMap(obj.getObjMap());
-				  	  	  JSONObject json = JSONObject.fromObject(task);
-				  		    //System.out.println(jsonObject);
-				  		  log.debug("2003-MSG:任务已加入列表：" + json.toString());
-				  		  Client clt = new Client(SlaveConfig.getInstance().getMasterServer(),
-				  		    		SlaveConfig.getInstance().getMasterPort());
-				  		  String Result = clt.SendMsgNetty(json.toString());
-				  		  if(Result.equals("Done"))
-				  		  {
-				  		      log.debug("2003-MSG:["+obj.getTaskID()+"] Complete!");
-				  		  }
-			    	  }
-			    	  else
-			    	  {
-			    		  log.warn("任务执行异常");
-			    	  }
-		    	  }
-		    	  else
-		    	  {
-		    		  log.warn("任务对象为 null");
-		    	  }
-		    	  break;
-		      case 2003://汇总新任务
-		    	  StatTaskInfo objstat = new StatTaskInfo();
-		    	  objstat = objstat.getByJson(msgBody);
-		    	  if(objstat != null)
-		    	  {
-			    	  exe.Execute(objstat);
-			    	  log.debug("StatTask:[" + objstat.getID() +"] Start....");
-		    	  }
-		    	  break;
+//		      case 2001://采集新任务
+//		    	  
+//		    	  if(ThreadPool.getInstance().getThreadQueueCount()>100)
+//		    	  {
+////		    		  pw.println("NO");//返回客户端信息
+////				      pw.flush();
+////				      return;
+//		    		  strReturn = "NO";
+//		    	  }
+//		    	  TaskMsg obj = new TaskMsg();
+//		    	  obj = obj.getByJson(msgBody);
+//		    	  if(obj != null)
+//		    	  {
+//			    	  if(exe.Execute(obj))
+//			    	  {
+//			    		  log.debug("Task:[" + obj.getTaskID() +"] Start....");	
+//			    		  TaskMsg task = new TaskMsg();
+//				  		  task.setMsgID(2003);//通知主控，任务已加入列表，请主控从任务列表中删除该任务
+//				  		  task.setTaskID(obj.getTaskID());
+//				  		  task.setObjMap(obj.getObjMap());
+//				  	  	  JSONObject json = JSONObject.fromObject(task);
+//				  		    //System.out.println(jsonObject);
+//				  		  log.debug("2003-MSG:任务已加入列表：" + json.toString());
+//				  		  Client clt = new Client(SlaveConfig.getInstance().getMasterServer(),
+//				  		    		SlaveConfig.getInstance().getMasterPort());
+//				  		  String Result = clt.SendMsgNetty(json.toString());
+//				  		  if(Result.equals("Done"))
+//				  		  {
+//				  		      log.debug("2003-MSG:["+obj.getTaskID()+"] Complete!");
+//				  		  }
+//			    	  }
+//			    	  else
+//			    	  {
+//			    		  log.warn("任务执行异常");
+//			    	  }
+//		    	  }
+//		    	  else
+//		    	  {
+//		    		  log.warn("任务对象为 null");
+//		    	  }
+//		    	  break;
+//		      case 2003://汇总新任务
+//		    	  StatTaskInfo objstat = new StatTaskInfo();
+//		    	  objstat = objstat.getByJson(msgBody);
+//		    	  if(objstat != null)
+//		    	  {
+//			    	  exe.Execute(objstat);
+//			    	  log.debug("StatTask:[" + objstat.getID() +"] Start....");
+//		    	  }
+//		    	  break;
 		      case 9999:
 		    	  shutdown();
 //		    	  pw.println("Done");//返回客户端信息
